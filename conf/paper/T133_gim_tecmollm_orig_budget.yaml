@@ -1,0 +1,31 @@
+# R2 post-audit (tasks-133): GIM TEC-MoLLM fairness control, original disclosed budget
+meta:
+  paper_slug: "t133_gim_tecmollm_orig_budget"
+
+data:
+  lag: 12
+  horizon: 12
+
+train:
+  year_split: true
+  stride_horizon: true
+  prefix_boundary: true
+  epochs: 200
+  early_stop: true
+  early_stop_patience: 20
+  amp: true
+  debug: false
+  batch_size: 17
+  accumulate_steps: 6
+  optimizer: adam
+  scheduler: cosine
+  lr_init: 0.0003
+  weight_decay: 0.0
+
+predictor:
+  use_lora: true
+  d_llm: 1280
+  llm_layers: 3
+  node_chunk: 1024
+  hf_model_name: "openai-community/gpt2-large"
+  hf_cache_dir: "data/hf_cache"

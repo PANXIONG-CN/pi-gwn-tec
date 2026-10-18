@@ -1,0 +1,19 @@
+# Paper protocol (Batch C1): China DE-GWN
+data:
+  lag: 12
+  horizon: 12
+
+train:
+  year_split: true
+  stride_horizon: true
+  prefix_boundary: true
+  epochs: 200
+  early_stop: true
+  early_stop_patience: 20
+  debug: false
+
+physics:
+  use_pinn: false
+  use_drivers: true
+  use_drivers_input: true
+

@@ -1,0 +1,31 @@
+# R2 post-audit (tasks-133): GIM TEC-MoLLM matched-budget elastic config with GC
+meta:
+  paper_slug: "t133_gim_tecmollm_matched_budget_elastic_nc512_gc"
+
+data:
+  lag: 12
+  horizon: 12
+
+train:
+  year_split: true
+  stride_horizon: true
+  prefix_boundary: true
+  epochs: 200
+  early_stop: true
+  early_stop_patience: 20
+  amp: true
+  debug: false
+  batch_size: 32
+  accumulate_steps: 6
+  optimizer: adam
+  scheduler: cosine
+  lr_init: 0.0003
+  weight_decay: 0.0
+
+predictor:
+  use_lora: true
+  d_llm: 1280
+  llm_layers: 3
+  node_chunk: 512
+  hf_model_name: "openai-community/gpt2-large"
+  hf_cache_dir: "data/hf_cache"

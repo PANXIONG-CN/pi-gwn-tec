@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "Please cite the article and this software when using this code."
+title: "pi-gwn-tec: Physics inspired graph learning for ionospheric total electron content forecasting"
+type: software
+license: MIT
+repository-code: "https://github.com/PANXIONG-CN/pi-gwn-tec"
+keywords:
+  - ionosphere
+  - total electron content
+  - space weather
+  - graph neural network
+  - physics-inspired machine learning
+authors:
+  - family-names: "Xiong"
+    given-names: "Pan"
+    affiliation: "State Key Laboratory of Solar Activity and Space Weather, National Space Science Center, Chinese Academy of Sciences, Beijing, China"
+  - family-names: "Long"
+    given-names: "Cheng"
+    affiliation: "College of Computing and Data Science, Nanyang Technological University, Singapore"
+  - family-names: "Zhou"
+    given-names: "Huiyu"
+    affiliation: "School of Computing and Mathematical Sciences, University of Leicester, Leicester, United Kingdom"
+  - family-names: "Battiston"
+    given-names: "Roberto"
+    affiliation: "Department of Physics, University of Trento, Trento, Italy; National Institute for Nuclear Physics, The Trento Institute for Fundamental Physics and Applications, Trento, Italy"
+  - family-names: "Pulinets"
+    given-names: "Sergey"
+    affiliation: "Space Research Institute of the Russian Academy of Sciences (IKI), Moscow, Russia"
+  - family-names: "De Santis"
+    given-names: "Angelo"
+    affiliation: "Istituto Nazionale di Geofisica e Vulcanologia, Rome, Italy"
+  - family-names: "Iuppa"
+    given-names: "Roberto"
+    affiliation: "Department of Physics, University of Trento, Trento, Italy"
+  - family-names: "Shen"
+    given-names: "Xuhui"
+    affiliation: "State Key Laboratory of Solar Activity and Space Weather, National Space Science Center, Chinese Academy of Sciences, Beijing, China"

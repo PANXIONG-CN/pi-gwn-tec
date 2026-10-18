@@ -1,0 +1,33 @@
+# R2 post-audit (tasks-132): China mechanism-line sensitivity, low kappa_nd
+meta:
+  paper_slug: "t132_china_pi_gwn_drvonly_adv_kappa0p02"
+
+data:
+  lag: 12
+  horizon: 12
+
+train:
+  year_split: true
+  stride_horizon: true
+  prefix_boundary: true
+  epochs: 200
+  early_stop: true
+  early_stop_patience: 20
+  amp: true
+  debug: false
+  batch_size: 192
+  accumulate_steps: 1
+  optimizer: adam
+  scheduler: plateau
+  lr_init: 0.003
+  weight_decay: 0.0
+
+physics:
+  use_pinn: true
+  use_drivers: true
+  use_drivers_input: false
+  use_diffusion: true
+  use_adv: true
+  nochem: false
+  lambda_phys: 0.05
+  kappa_nd: 0.02

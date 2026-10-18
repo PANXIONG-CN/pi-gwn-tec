@@ -1,0 +1,32 @@
+# Local environments
+.env
+.venv*/
+__pycache__/
+*.py[cod]
+
+# Data and generated experiment outputs
+data/
+outputs/
+outputs_*/
+paper_artifacts*/
+logs/
+wandb/
+tmp/
+tmp_wandb*/
+coordinates/
+model/coordinates/
+# Numerical Source Data are Supplementary Data 1 of the article
+source_data/
+
+# Model/data artifacts
+*.npy
+*.npz
+*.pth
+*.pt
+*.ckpt
+*.h5
+
+# OS/editor files
+.DS_Store
+.idea/
+.vscode/

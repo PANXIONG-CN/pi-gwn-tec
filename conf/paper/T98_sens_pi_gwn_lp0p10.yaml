@@ -1,0 +1,27 @@
+# Review response (tasks-98): sensitivity (PI-GWN), lambda_phys low
+meta:
+  paper_slug: "t98_sens_pi_gwn_lp0p10"
+
+data:
+  lag: 12
+  horizon: 12
+
+train:
+  year_split: true
+  stride_horizon: true
+  prefix_boundary: true
+  epochs: 200
+  early_stop: true
+  early_stop_patience: 20
+  amp: true
+  debug: false
+
+physics:
+  use_pinn: true
+  use_drivers: true
+  use_drivers_input: true
+  use_diffusion: true
+  use_adv: true
+  nochem: false
+  lambda_phys: 0.1
+

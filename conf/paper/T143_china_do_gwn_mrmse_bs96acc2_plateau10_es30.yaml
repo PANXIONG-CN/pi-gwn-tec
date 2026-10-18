@@ -1,0 +1,32 @@
+# R4 tasks-143: China DO-GWN matched control under RMSE checkpointing, conservative batch recipe, and longer patience
+meta:
+  paper_slug: "t143_china_do_gwn_mrmse_bs96acc2_plateau10_es30"
+
+data:
+  lag: 12
+  horizon: 12
+
+train:
+  year_split: true
+  stride_horizon: true
+  prefix_boundary: true
+  epochs: 200
+  early_stop: true
+  early_stop_patience: 30
+  amp: true
+  debug: false
+  batch_size: 96
+  accumulate_steps: 2
+  optimizer: adam
+  scheduler: plateau
+  plateau_patience: 10
+  lr_init: 0.003
+  weight_decay: 0.0
+  monitor_metric: val_rmse
+  early_stop_metric: val_rmse
+
+physics:
+  use_pinn: false
+  use_drivers: false
+  use_drivers_input: false
+

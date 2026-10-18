@@ -1,0 +1,31 @@
+# Review response (tasks-98): ST-Patch Transformer (PI, lp0p02, nodiff, noadv)
+meta:
+  paper_slug: "t98_pi_stpatch_transformer_lp0p02_nodiff_noadv"
+
+data:
+  lag: 12
+  horizon: 12
+
+train:
+  year_split: true
+  stride_horizon: true
+  prefix_boundary: true
+  epochs: 200
+  early_stop: true
+  early_stop_patience: 20
+  amp: true
+  debug: false
+  optimizer: "adamw"
+  lr_init: 0.0003
+  weight_decay: 0.01
+  scheduler: "cosine"
+  cosine_t_max: 200
+
+physics:
+  use_pinn: true
+  use_drivers: true
+  use_drivers_input: true
+  use_diffusion: false
+  use_adv: false
+  nochem: false
+  lambda_phys: 0.02

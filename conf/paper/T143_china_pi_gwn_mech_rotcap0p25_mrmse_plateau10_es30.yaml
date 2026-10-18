@@ -1,0 +1,39 @@
+# R4 tasks-143: China mechanism dualfront, aggregate-first RMSE recipe with longer patience
+meta:
+  paper_slug: "t143_china_pi_gwn_mech_rotcap0p25_mrmse_plateau10_es30"
+
+data:
+  lag: 12
+  horizon: 12
+
+train:
+  year_split: true
+  stride_horizon: true
+  prefix_boundary: true
+  epochs: 200
+  early_stop: true
+  early_stop_patience: 30
+  amp: true
+  debug: false
+  batch_size: 192
+  accumulate_steps: 1
+  optimizer: adam
+  scheduler: plateau
+  plateau_patience: 10
+  lr_init: 0.003
+  weight_decay: 0.0
+  monitor_metric: val_rmse
+  early_stop_metric: val_rmse
+
+physics:
+  use_pinn: true
+  use_drivers: true
+  use_drivers_input: false
+  use_diffusion: true
+  use_adv: true
+  nochem: false
+  use_dynamic_rot_cap: true
+  lambda_phys: 0.05
+  rot_cap: 0.25
+  rot_cap_k: 0.01
+

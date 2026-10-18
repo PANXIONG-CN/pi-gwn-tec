@@ -1,0 +1,31 @@
+# R2 tasks-110: locality-constrained ST-Patch Transformer (DO, GIM pilot)
+meta:
+  paper_slug: "t110_do_stpatch_transformer_local"
+
+data:
+  lag: 12
+  horizon: 12
+
+train:
+  year_split: true
+  stride_horizon: true
+  prefix_boundary: true
+  epochs: 200
+  early_stop: true
+  early_stop_patience: 20
+  amp: true
+  debug: false
+  optimizer: "adamw"
+  lr_init: 0.0003
+  weight_decay: 0.01
+  scheduler: "cosine"
+  cosine_t_max: 200
+
+model:
+  attention_mode: "local_mask"
+  local_radius: 1
+
+physics:
+  use_pinn: false
+  use_drivers: false
+  use_drivers_input: false

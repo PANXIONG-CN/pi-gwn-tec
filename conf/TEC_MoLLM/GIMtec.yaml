@@ -1,0 +1,22 @@
+model:
+  name: TEC_MoLLM
+train:
+  epochs: 200
+  batch_size: 84
+  amp: true
+  optimizer: adamw
+  scheduler: plateau
+  plateau_factor: 0.5
+  plateau_patience: 20
+  lr_init: 0.0005
+  min_lr: 1.0e-5
+  weight_decay: 0.01
+  early_stop: true
+  early_stop_patience: 20
+predictor:
+  node_chunk: 5184
+  use_lora: true
+init:
+  init_from: ""
+loss:
+  loss_func: mask_mae

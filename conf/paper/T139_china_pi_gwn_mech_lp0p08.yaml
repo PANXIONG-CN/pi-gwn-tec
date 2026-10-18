@@ -1,0 +1,32 @@
+# R4 tasks-139: China mechanism rescue, moderate lambda_phys increase
+meta:
+  paper_slug: "t139_china_pi_gwn_mech_lp0p08"
+
+data:
+  lag: 12
+  horizon: 12
+
+train:
+  year_split: true
+  stride_horizon: true
+  prefix_boundary: true
+  epochs: 200
+  early_stop: true
+  early_stop_patience: 20
+  amp: true
+  debug: false
+  batch_size: 192
+  accumulate_steps: 1
+  optimizer: adam
+  scheduler: plateau
+  lr_init: 0.003
+  weight_decay: 0.0
+
+physics:
+  use_pinn: true
+  use_drivers: true
+  use_drivers_input: false
+  use_diffusion: true
+  use_adv: true
+  nochem: false
+  lambda_phys: 0.08

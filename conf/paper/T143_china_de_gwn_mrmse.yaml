@@ -1,0 +1,27 @@
+# China flagship v2: DE-GWN matched mRMSE recipe
+data:
+  lag: 12
+  horizon: 12
+
+train:
+  year_split: true
+  stride_horizon: true
+  prefix_boundary: true
+  epochs: 200
+  early_stop: true
+  early_stop_patience: 20
+  amp: true
+  debug: false
+  batch_size: 192
+  accumulate_steps: 1
+  optimizer: adam
+  scheduler: plateau
+  lr_init: 0.003
+  weight_decay: 0.0
+  monitor_metric: val_rmse
+  early_stop_metric: val_rmse
+
+physics:
+  use_pinn: false
+  use_drivers: true
+  use_drivers_input: true

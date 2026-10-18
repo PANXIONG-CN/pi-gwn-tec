@@ -1,0 +1,36 @@
+# R4 tasks-142: China mechanism flagship push, more aggressive dynamic ROT cap
+meta:
+  paper_slug: "t142_china_pi_gwn_mech_rotcap0p25_k0p03"
+
+data:
+  lag: 12
+  horizon: 12
+
+train:
+  year_split: true
+  stride_horizon: true
+  prefix_boundary: true
+  epochs: 200
+  early_stop: true
+  early_stop_patience: 20
+  amp: true
+  debug: false
+  batch_size: 192
+  accumulate_steps: 1
+  optimizer: adam
+  scheduler: plateau
+  lr_init: 0.003
+  weight_decay: 0.0
+
+physics:
+  use_pinn: true
+  use_drivers: true
+  use_drivers_input: false
+  use_diffusion: true
+  use_adv: true
+  nochem: false
+  use_dynamic_rot_cap: true
+  lambda_phys: 0.05
+  rot_cap: 0.25
+  rot_cap_k: 0.03
+

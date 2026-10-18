@@ -1,0 +1,54 @@
+{
+  "title": "pi-gwn-tec: code for Physics inspired graph learning for ionospheric total electron content forecasting",
+  "description": "<p>Source code for the article <em>Physics inspired graph learning for ionospheric total electron content forecasting</em> (Xiong et al.): Graph WaveNet predictors, physics-inspired training objectives, model configurations for every table and figure, evaluation, calibration, statistics and figure-generation routines. Data are archived separately; see README.md.</p>",
+  "upload_type": "software",
+  "license": "MIT",
+  "keywords": [
+    "ionosphere",
+    "total electron content",
+    "space weather",
+    "graph neural network",
+    "physics-inspired machine learning"
+  ],
+  "creators": [
+    {
+      "name": "Xiong, Pan",
+      "affiliation": "State Key Laboratory of Solar Activity and Space Weather, National Space Science Center, Chinese Academy of Sciences, Beijing, China"
+    },
+    {
+      "name": "Long, Cheng",
+      "affiliation": "College of Computing and Data Science, Nanyang Technological University, Singapore"
+    },
+    {
+      "name": "Zhou, Huiyu",
+      "affiliation": "School of Computing and Mathematical Sciences, University of Leicester, Leicester, United Kingdom"
+    },
+    {
+      "name": "Battiston, Roberto",
+      "affiliation": "Department of Physics, University of Trento, Trento, Italy; National Institute for Nuclear Physics, The Trento Institute for Fundamental Physics and Applications, Trento, Italy"
+    },
+    {
+      "name": "Pulinets, Sergey",
+      "affiliation": "Space Research Institute of the Russian Academy of Sciences (IKI), Moscow, Russia"
+    },
+    {
+      "name": "De Santis, Angelo",
+      "affiliation": "Istituto Nazionale di Geofisica e Vulcanologia, Rome, Italy"
+    },
+    {
+      "name": "Iuppa, Roberto",
+      "affiliation": "Department of Physics, University of Trento, Trento, Italy"
+    },
+    {
+      "name": "Shen, Xuhui",
+      "affiliation": "State Key Laboratory of Solar Activity and Space Weather, National Space Science Center, Chinese Academy of Sciences, Beijing, China"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.23331771",
+      "relation": "references",
+      "scheme": "doi"
+    }
+  ]
+}

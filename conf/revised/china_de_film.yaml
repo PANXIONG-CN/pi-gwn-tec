@@ -1,0 +1,21 @@
+model: GWN
+horizon: 12
+driver_fusion: film
+use_drivers_input: true
+rho: 0.0
+lr: 0.003
+weight_decay: 1.0e-05
+batch_size: 192
+eval_batch_size: 1
+epochs: 200
+bf16: true
+early_stop_patience: 30
+seed_list:
+- 42
+- 1024
+- 2025
+- 3407
+- 5000
+objective: masked_mae_tecu
+checkpoint_selection: first_strict_minimum_supervised_pooled_validation_rmse
+dataset: china
