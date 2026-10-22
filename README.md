@@ -142,3 +142,6 @@ MIT. Adapted Channel Mixer/OpenSTL inference components keep their Apache-2.0 li
 `third_party/channel_mixer`. The graph–Transformer is an adaptation of Liu & Jiang (2025),
 not the authors' code (`model/GNNTrans/ARCHITECTURE.md`). Please cite the article and
 `CITATION.cff`.
+
+The paper code snapshot is archived on Zenodo at [10.5281/zenodo.23549377](https://doi.org/10.5281/zenodo.23549377).
+The corresponding [GitHub release](https://github.com/PANXIONG-CN/pi-gwn-tec/releases/tag/paper-2026-10-22) identifies the fixed source snapshot.

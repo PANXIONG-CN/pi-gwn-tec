@@ -4,6 +4,8 @@ title: "pi-gwn-tec: Physics inspired graph learning for ionospheric total electr
 type: software
 license: MIT
 repository-code: "https://github.com/PANXIONG-CN/pi-gwn-tec"
+doi: "10.5281/zenodo.23549377"
+date-released: "2026-10-22"
 keywords:
   - ionosphere
   - total electron content
