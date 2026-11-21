@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "Please cite the article and this software when using this code."
-title: "pi-gwn-tec: Physical knowledge improves ionospheric electron content forecasts as model input rather than as loss penalty"
+title: "pi-gwn-tec: Physical knowledge improves ionospheric electron content forecasts as inputs rather than as tested loss penalties"
 type: software
 license: MIT
 repository-code: "https://github.com/PANXIONG-CN/pi-gwn-tec"

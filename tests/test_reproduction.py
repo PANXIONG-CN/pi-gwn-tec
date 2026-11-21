@@ -1,7 +1,7 @@
 """Key numbers of the article recomputed from the daily statistics (no weights).
 
-Runs when TECFC_SD1 points to Supplementary Data 1 with its daily statistics unpacked into statistics/ (available
-on request), or TECFC_EXPERIMENT_REPO to the experiment repository; otherwise skipped.
+Runs when TECFC_SD1 points to Supplementary Data 1 with its daily statistics unpacked into statistics/ (archived
+with the code on Zenodo), or TECFC_EXPERIMENT_REPO to the experiment repository; otherwise skipped.
 """
 import csv
 import os
@@ -16,7 +16,7 @@ sys.path.insert(0, str(REPO))
 SD1, EXP = os.environ.get('TECFC_SD1'), os.environ.get('TECFC_EXPERIMENT_REPO')
 pytestmark = [pytest.mark.skipif(not (SD1 or EXP), reason='set TECFC_SD1 (or TECFC_EXPERIMENT_REPO)'),
               pytest.mark.skipif(bool(SD1) and not EXP and not any(Path(SD1, 'statistics').glob('*.npz')),
-                                 reason='TECFC_SD1 has no daily statistics (statistics/*.npz, available on request)')]
+                                 reason='TECFC_SD1 has no daily statistics (statistics/*.npz, archived with the code on Zenodo)')]
 
 KEY = ['k.k1.delta.conf26', 'k.k2.delta.conf26', 'k.k3.delta.conf26', 'k.k4.delta.conf26',
        'k.k5.cn.delta.conf26', 'k.k5.jp.delta.conf26', 'k.k6.cn.delta.conf26', 'k.k6.jp.delta.conf26',

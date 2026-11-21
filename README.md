@@ -1,7 +1,7 @@
 # pi-gwn-tec
 
-Code for **Physical knowledge improves ionospheric electron content forecasts as model input rather than as loss
-penalty** (Xiong et al.). It recomputes the numbers of the article's tables from the daily statistics, and retrains
+Code for **Physical knowledge improves ionospheric electron content forecasts as inputs rather than as tested loss
+penalties** (Xiong et al.). It recomputes the numbers of the article's tables from the daily statistics, and retrains
 and scores every configuration of the article.
 
 ## Install
@@ -21,7 +21,8 @@ uv pip install -r requirements.txt
 |---|---|
 | Global IGS maps 2009-2026, two-hourly indices, regional JPLD arrays (China, Japan) | GIMtec, https://doi.org/10.5281/zenodo.24410367 (`python scripts/download_gimtec_from_zenodo.py --data-root DIR`) |
 | Figure and table source data, interval results, preregistration and freeze records | Supplementary Data 1 of the article |
-| Daily statistics (`statistics/*.npz` of Supplementary Data 1, about 535 MB), trained weights, prediction arrays | available from the corresponding author on request |
+| Daily statistics (`statistics/*.npz` of Supplementary Data 1, about 535 MB) and frozen model checkpoints (indexed by system) | Zenodo record of this code: `Supplementary_Data_1_statistics.zip`, `checkpoints.zip` |
+| Per-window prediction arrays (about 170 GB) | from the corresponding author on request (too large for the repository); those of the supplementary penalty-term, graph-support and conditioning controls were not retained and can be regenerated from the checkpoints |
 | CODE one-day forecast (C1PG) | NASA CDDIS: `scripts/fetch_c1pg.py` (from 2023), `scripts/build_c1pg_ionex.py` (2015-2022), `scripts/convert_c1pg.py` |
 
 The model assets (fixed graph and its rank-10 SVD initialization, training-year climatology, solar-geometry table of

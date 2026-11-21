@@ -1,6 +1,6 @@
 {
-  "title": "pi-gwn-tec: Physical knowledge improves ionospheric electron content forecasts as model input rather than as loss penalty",
-  "description": "<p>Code for the article <em>Physical knowledge improves ionospheric electron content forecasts as model input rather than as loss penalty</em> (Xiong et al.): Graph WaveNet and SimVP forecast models, the physical inputs, loss penalties and structural priors compared in the article, the multi-family ensemble, the regional models for China and Japan, interval calibration, scoring, one configuration file per configuration and a script that recomputes the reported tables from daily statistics. See README.md.</p>",
+  "title": "pi-gwn-tec: Physical knowledge improves ionospheric electron content forecasts as inputs rather than as tested loss penalties",
+  "description": "<p>Code for the article <em>Physical knowledge improves ionospheric electron content forecasts as inputs rather than as tested loss penalties</em> (Xiong et al.): Graph WaveNet and SimVP forecast models, the physical inputs, loss penalties and structural priors compared in the article, the multi-family ensemble, the regional models for China and Japan, interval calibration, scoring, one configuration file per configuration and a script that recomputes the reported tables from daily statistics. See README.md.</p><p>Besides the source code, this record holds the frozen model checkpoints (checkpoints.zip, with an index by system) and the per-day sufficient statistics of Supplementary Data 1 (Supplementary_Data_1_statistics.zip); these two archives are not part of the GitHub repository.</p>",
   "upload_type": "software",
   "license": "MIT",
   "keywords": [

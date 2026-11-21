@@ -21,7 +21,7 @@ CPU only; a few minutes.
 Statistics and records are addressed by their location in the experiment
 repository.  With --sd1 the MANIFEST.csv of Supplementary Data 1 maps those
 locations to its own file names (see Statistics), so Supplementary Data 1
-must include its per-day statistics (statistics/*.npz, available on request).
+must include its per-day statistics (statistics/*.npz, archived with the code on Zenodo).
 
 Exit status 0 only if every recomputed row agrees (absolute difference
 <= 1e-6; values reported with three decimals <= 5e-4).

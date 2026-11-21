@@ -7,7 +7,7 @@ the code into the names used in the article. The preregistration texts, commit t
 
 | Path | Content |
 |---|---|
-| `EVIDENCE.csv` | one row per number of the article (6,782 rows; the same file as in Supplementary Data 1) with its source record and JSON pointer. Ids read `<group>.<subject>.<quantity>.<period>[.<qualifier>]`: groups `k` (preregistered 2026 criteria), `g` (global systems), `r` (regional systems), `p` (loss penalty), `i` (physical inputs), `s` (longitude wrap), `h` (96-hour forecasts), `c` (interval calibration), `b` (baselines, CODE forecast, cost), `o` (other checks); periods `val`, `orig`, `dev`, `devsm`, `conf26`, `h2014` |
+| `EVIDENCE.csv` | one row per number of the article (6,797 rows; the same file as in Supplementary Data 1) with its source record and JSON pointer. Ids read `<group>.<subject>.<quantity>.<period>[.<qualifier>]`: groups `k` (preregistered 2026 criteria), `g` (global systems), `r` (regional systems), `p` (loss penalty), `i` (physical inputs), `s` (longitude wrap), `h` (96-hour forecasts), `c` (interval calibration), `b` (baselines, CODE forecast, cost), `o` (other checks); periods `val`, `orig`, `dev`, `devsm`, `conf26`, `h2014` |
 | `NAME_MAP.csv` | internal name, article name and evidence id slug |
 | `scoring/` | scoring descriptors of the 2026 tables and recorded values that are not functions of the daily statistics (training-time diagnostics, thresholds, counts) |
 | `baselines/` | baseline table, CODE one-day forecast scores and release times, persistence by period, computation cost, the cost reported for Mixer-SimVP (Liu et al. 2024, Table 2) and a configuration template for `tecfc/scoring/code_forecast.py` |

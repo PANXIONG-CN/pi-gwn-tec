@@ -9,7 +9,7 @@ Retraining a configuration (path 2) needs the data in the last column.
 Data keys: **G** GIMtec record (global maps 2009-2025, indices); **G26** global maps 2026 (new GIMtec version);
 **J** regional JPLD arrays (new GIMtec version); **A** prepared assets (`scripts/prepare_assets.py`; the gate table of
 the gated nighttime term: `scripts/prepare_night_gate.py`);
-**W** trained weights (on request); **C** CODE C1PG files (NASA CDDIS).
+**W** trained weights (`checkpoints.zip` of the Zenodo record of this code); **C** CODE C1PG files (NASA CDDIS).
 
 Commands: `run` = `python -m tecfc.training.run --config <config> --seed <s> --out <dir>`;
 `predict` = `python -m tecfc.training.predict --config <config> --seed <s> --checkpoint <dir>/best_200.pt --split <split> --out <file>`
