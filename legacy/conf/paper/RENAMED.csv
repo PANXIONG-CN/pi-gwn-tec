@@ -1,0 +1,17 @@
+old,new
+model/STPatchGPT,model/STPatchTransformer
+model/STPatchGPT/stpatchgpt.py,model/STPatchTransformer/stpatch_transformer.py
+conf/STPatchGPT,conf/STPatchTransformer
+conf/paper/T110_stpatchgpt_local_do.yaml,conf/paper/T110_stpatch_transformer_local_do.yaml
+conf/paper/T110_stpatchgpt_local_pi.yaml,conf/paper/T110_stpatch_transformer_local_pi.yaml
+conf/paper/T98_stpatchgpt_do.yaml,conf/paper/T98_stpatch_transformer_do.yaml
+conf/paper/T98_stpatchgpt_pi.yaml,conf/paper/T98_stpatch_transformer_pi.yaml
+conf/paper/T98_stpatchgpt_pi_lp0p002_nodrivers_noadv.yaml,conf/paper/T98_stpatch_transformer_pi_lp0p002_nodrivers_noadv.yaml
+conf/paper/T98_stpatchgpt_pi_lp0p005_noadv.yaml,conf/paper/T98_stpatch_transformer_pi_lp0p005_noadv.yaml
+conf/paper/T98_stpatchgpt_pi_lp0p005_nodrivers_noadv.yaml,conf/paper/T98_stpatch_transformer_pi_lp0p005_nodrivers_noadv.yaml
+conf/paper/T98_stpatchgpt_pi_lp0p01_noadv.yaml,conf/paper/T98_stpatch_transformer_pi_lp0p01_noadv.yaml
+conf/paper/T98_stpatchgpt_pi_lp0p01_nodrivers_noadv.yaml,conf/paper/T98_stpatch_transformer_pi_lp0p01_nodrivers_noadv.yaml
+conf/paper/T98_stpatchgpt_pi_lp0p02_noadv.yaml,conf/paper/T98_stpatch_transformer_pi_lp0p02_noadv.yaml
+conf/paper/T98_stpatchgpt_pi_lp0p02_nodiff_noadv.yaml,conf/paper/T98_stpatch_transformer_pi_lp0p02_nodiff_noadv.yaml
+conf/paper/T98_stpatchgpt_pi_lp0p05_noadv.yaml,conf/paper/T98_stpatch_transformer_pi_lp0p05_noadv.yaml
+conf/paper/A2_gim_stgpt.yaml,conf/paper/A2_gim_tecmollm.yaml

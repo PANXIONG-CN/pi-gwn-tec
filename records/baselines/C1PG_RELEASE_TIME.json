@@ -1,0 +1,139 @@
+{
+  "experiment": "exp0029",
+  "stage": "c1pg_release_time",
+  "at_utc": "2026-11-15T14:48:00.166534+00:00",
+  "files": 1400,
+  "stamp_hours_after_day_00": {
+    "min": 7.2,
+    "p05": 7.4,
+    "median": 8.45,
+    "p95": 16.151666666666664,
+    "max": 226.75
+  },
+  "stamp_hours_after_cutoff_prev_day_22": {
+    "min": 9.2,
+    "p05": 9.4,
+    "median": 10.45,
+    "p95": 18.151666666666664,
+    "max": 228.75
+  },
+  "fraction_stamped_within_hours_of_day_start": {
+    "8": 0.32571428571428573,
+    "9": 0.8607142857142858,
+    "10": 0.8928571428571429,
+    "12": 0.9142857142857143,
+    "24": 0.985,
+    "48": 0.9914285714285714
+  },
+  "files_stamped_after_24h": 21,
+  "latest_stamped": [
+    {
+      "date": "2026-08-31",
+      "stamp": "09-SEP-26 10:45",
+      "created_hours_after_day_start": 226.75
+    },
+    {
+      "date": "2026-09-04",
+      "stamp": "09-SEP-26 17:44",
+      "created_hours_after_day_start": 137.73333333333332
+    },
+    {
+      "date": "2024-06-10",
+      "stamp": "14-JUN-24 09:33",
+      "created_hours_after_day_start": 105.55
+    },
+    {
+      "date": "2026-09-06",
+      "stamp": "09-SEP-26 22:40",
+      "created_hours_after_day_start": 94.66666666666669
+    },
+    {
+      "date": "2024-06-11",
+      "stamp": "14-JUN-24 10:29",
+      "created_hours_after_day_start": 82.48333333333333
+    },
+    {
+      "date": "2026-09-07",
+      "stamp": "09-SEP-26 23:28",
+      "created_hours_after_day_start": 71.46666666666667
+    },
+    {
+      "date": "2026-10-05",
+      "stamp": "07-OCT-26 18:16",
+      "created_hours_after_day_start": 66.26666666666667
+    },
+    {
+      "date": "2024-01-08",
+      "stamp": "10-JAN-24 18:07",
+      "created_hours_after_day_start": 66.11666666666666
+    }
+  ],
+  "monthly_median_stamp_hours_same_day_files": {
+    "2023-01": 7.85,
+    "2023-02": 7.892,
+    "2023-03": 7.967,
+    "2023-04": 8.625,
+    "2023-05": 8.6,
+    "2023-06": 8.692,
+    "2023-07": 8.667,
+    "2023-08": 8.633,
+    "2023-09": 8.667,
+    "2023-10": 8.683,
+    "2023-11": 7.708,
+    "2023-12": 7.717,
+    "2024-01": 7.667,
+    "2024-02": 7.717,
+    "2024-03": 7.65,
+    "2024-04": 8.7,
+    "2024-05": 8.717,
+    "2024-06": 9.058,
+    "2024-07": 8.417,
+    "2024-08": 8.4,
+    "2024-09": 8.375,
+    "2024-10": 8.383,
+    "2024-11": 7.408,
+    "2024-12": 7.417,
+    "2025-01": 7.517,
+    "2025-02": 7.55,
+    "2025-03": 7.717,
+    "2025-04": 8.533,
+    "2025-05": 8.567,
+    "2025-06": 8.492,
+    "2025-07": 8.6,
+    "2025-08": 8.633,
+    "2025-09": 8.8,
+    "2025-10": 8.817,
+    "2025-11": 7.45,
+    "2025-12": 7.433,
+    "2026-01": 7.4,
+    "2026-02": 7.692,
+    "2026-03": 7.45,
+    "2026-04": 8.517,
+    "2026-05": 8.5,
+    "2026-06": 8.333,
+    "2026-07": 8.467,
+    "2026-08": 8.467,
+    "2026-09": 8.583,
+    "2026-10": 8.25
+  },
+  "winter_median_hours": 7.65,
+  "summer_median_hours": 8.6,
+  "seasonal_step_hours": 0.9499999999999993,
+  "inference": {
+    "statement": "the header stamp has no time-zone field; the roughly one-hour step at the daylight-saving changes (winter about 7.4-7.9 h, summer about 8.4-8.7 h after 00:00) is what a fixed-UTC production schedule produces when stamps are written in Central European local time (CET/CEST); under that reading the files were created at about 06:25-06:50 UTC on the target day",
+    "certainty": "inference; not confirmed by documentation (the CODE archive server answered HTTP 503 on 2026-11-15 and the CDDIS description page carried no text)",
+    "if_stamp_is_UTC": {
+      "median_hours_after_cutoff": 10.433333333333334
+    },
+    "if_stamp_is_local_CET_CEST": {
+      "rule": "UTC = stamp - 1 h in November-March, - 2 h in April-October (daylight-saving boundary days not special-cased)",
+      "median_hours_after_day_00": 6.616666666666666,
+      "min_hours_after_day_00": 5.2,
+      "median_hours_after_cutoff": 8.616666666666667,
+      "min_hours_after_cutoff": 7.199999999999999
+    }
+  },
+  "cdds_last_modified": "CDDIS Last-Modified of these files is the 2026-08 re-upload time (and 2022-06 for old short names): not a release time",
+  "study_cutoff": "forecast origin day D uses inputs up to D-1 22:00 UTC; targets are D 00:00-22:00 UTC",
+  "comparability": "C1PG for day D was created after the first target epochs of day D (stamp 7.2 h or later after 00:00 on every one of the 1,400 files). Its data cut-off is not stated in the file. It is therefore a reference product that is not available at the study cut-off; any comparison is descriptive."
+}

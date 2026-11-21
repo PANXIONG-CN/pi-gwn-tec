@@ -1,0 +1,40 @@
+{
+  "status": "frozen_after_one_train_only_fit",
+  "formula": "q_EMP = b0 + b1*u + b2*(AE*u) + b3*(F107*max(cosSZA,0))",
+  "coefficient_names": [
+    "b0",
+    "b1",
+    "b2",
+    "b3"
+  ],
+  "coefficients": [
+    0.022709905085534887,
+    -0.1943854639389909,
+    2.1675977252475528e-05,
+    0.0016586705936429444
+  ],
+  "units": "q is nondimensional two-hour TEC change; u = TEC(TECU)/50; AE and F107 raw",
+  "driver_time": "same UTC as previous target state: target slots 0..10 (00..20 UTC)",
+  "training_years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2014,
+    2016,
+    2018
+  ],
+  "validation_excluded_from_fit": [
+    2013,
+    2017
+  ],
+  "fit_n": 145554189,
+  "fit_windows": 2553,
+  "driver_source": "../manuscript/revisions-20260929/revised/release/assets/data/drivers/gim_2009_2022.npz",
+  "driver_source_sha256": "fbd0a9eea7075fde4c79915fa862a86944ad9b2e7c4f93894743e87bba1ba645",
+  "solar": "old canonical NOAA fractional-year / 365, float64 then float32 at PPINN input",
+  "grid": "restored 71x73, duplicated longitude endpoint weighted twice",
+  "valid": "both adjacent TEC labels finite; zeros included",
+  "transition": "11 internal transitions per 12-target window; no history-to-target transition",
+  "fit_sufficient_statistics": "FIT_SUFFICIENT_STATISTICS.json"
+}

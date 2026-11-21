@@ -1,0 +1,45 @@
+{
+ "description": "Values of the 2026 scoring that are not functions of the daily statistics: the P95 cut-off of the regional high-level stratum (from persistence values), China fallback replacement counts (from the history array), and the disturbed-day classification counts (from hourly OMNI2 Kp/Dst).",
+ "source": "experiments/exp0025/result.json",
+ "datasets": {
+  "global_2026": {
+   "disturbance": {
+    "cadence": "all 24 hourly OMNI2 records per target UTC day",
+    "version": "Kp: OMNI2/GFZ, final status not separately declared; Dst: January–July provisional, August–October 29 quick-look; October 30 version not independently confirmed",
+    "rule": "any hourly Kp>=5 or Dst<=-50; any missing Kp/Dst hour excludes date only from this stratum",
+    "complete_days": 302,
+    "disturbed_days": 53,
+    "excluded_dates": [
+     "2026-10-30",
+     "2026-10-31"
+    ]
+   }
+  },
+  "china_2026": {
+   "P95": 67.5999984741211,
+   "P95_support": "all finite common causal P grid-times, without future target mask",
+   "gate_replacement": {
+    "threshold": 79.5,
+    "replaced_grid_times": 135328,
+    "total_grid_times": 6081600,
+    "fraction": 0.02225203893712181,
+    "valid_label_replaced_grid_times": 135328,
+    "valid_label_grid_times": 6074014,
+    "valid_label_fraction": 0.022279830109051445
+   }
+  },
+  "japan_2026": {
+   "P95": 38.099998474121094,
+   "P95_support": "all finite common causal P grid-times, without future target mask",
+   "gate_replacement": {
+    "threshold": null,
+    "replaced_grid_times": 0,
+    "total_grid_times": 0,
+    "fraction": 0.0,
+    "valid_label_replaced_grid_times": 0,
+    "valid_label_grid_times": 0,
+    "valid_label_fraction": 0.0
+   }
+  }
+ }
+}

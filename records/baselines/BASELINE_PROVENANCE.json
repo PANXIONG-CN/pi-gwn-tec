@@ -1,0 +1,1078 @@
+[
+ {
+  "row": "N1",
+  "column": "RMSE_validation",
+  "file": "experiments/exp0019/result.json",
+  "pointer": [
+   "main_table",
+   "validation",
+   "S2",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N1",
+  "column": "MAE_validation",
+  "file": "experiments/exp0019/result.json",
+  "pointer": [
+   "main_table",
+   "validation",
+   "S2",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N1",
+  "column": "RMSE_old_evaluation",
+  "file": "experiments/exp0019/result.json",
+  "pointer": [
+   "main_table",
+   "original_evaluation",
+   "S2",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N1",
+  "column": "MAE_old_evaluation",
+  "file": "experiments/exp0019/result.json",
+  "pointer": [
+   "main_table",
+   "original_evaluation",
+   "S2",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N1",
+  "column": "RMSE_2023_2025",
+  "file": "experiments/exp0019/result.json",
+  "pointer": [
+   "main_table",
+   "extension_evaluation",
+   "S2",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N1",
+  "column": "MAE_2023_2025",
+  "file": "experiments/exp0019/result.json",
+  "pointer": [
+   "main_table",
+   "extension_evaluation",
+   "S2",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N1",
+  "column": "RMSE_2026",
+  "file": "experiments/exp0025/result.json",
+  "pointer": [
+   "datasets",
+   "global_2026",
+   "full",
+   "methods",
+   "S2",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N1",
+  "column": "MAE_2026",
+  "file": "experiments/exp0025/result.json",
+  "pointer": [
+   "datasets",
+   "global_2026",
+   "full",
+   "methods",
+   "S2",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N2",
+  "column": "RMSE_validation",
+  "file": "experiments/exp0019/result.json",
+  "pointer": [
+   "main_table",
+   "validation",
+   "G5",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N2",
+  "column": "MAE_validation",
+  "file": "experiments/exp0019/result.json",
+  "pointer": [
+   "main_table",
+   "validation",
+   "G5",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N2",
+  "column": "RMSE_old_evaluation",
+  "file": "experiments/exp0019/result.json",
+  "pointer": [
+   "main_table",
+   "original_evaluation",
+   "G5",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N2",
+  "column": "MAE_old_evaluation",
+  "file": "experiments/exp0019/result.json",
+  "pointer": [
+   "main_table",
+   "original_evaluation",
+   "G5",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N2",
+  "column": "RMSE_2023_2025",
+  "file": "experiments/exp0019/result.json",
+  "pointer": [
+   "main_table",
+   "extension_evaluation",
+   "G5",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N2",
+  "column": "MAE_2023_2025",
+  "file": "experiments/exp0019/result.json",
+  "pointer": [
+   "main_table",
+   "extension_evaluation",
+   "G5",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N2",
+  "column": "RMSE_2026",
+  "file": "experiments/exp0025/result.json",
+  "pointer": [
+   "datasets",
+   "global_2026",
+   "full",
+   "methods",
+   "G5",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N2",
+  "column": "MAE_2026",
+  "file": "experiments/exp0025/result.json",
+  "pointer": [
+   "datasets",
+   "global_2026",
+   "full",
+   "methods",
+   "G5",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N3",
+  "column": "RMSE_validation",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "ensemble_table",
+   "validation",
+   "G-plus-M",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N3",
+  "column": "MAE_validation",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "ensemble_table",
+   "validation",
+   "G-plus-M",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N3",
+  "column": "RMSE_old_evaluation",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "ensemble_table",
+   "original_evaluation",
+   "G-plus-M",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N3",
+  "column": "MAE_old_evaluation",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "ensemble_table",
+   "original_evaluation",
+   "G-plus-M",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N3",
+  "column": "RMSE_2023_2025",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "ensemble_table",
+   "extension_evaluation",
+   "G-plus-M",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N3",
+  "column": "MAE_2023_2025",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "ensemble_table",
+   "extension_evaluation",
+   "G-plus-M",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N3",
+  "column": "RMSE_2026",
+  "file": "experiments/exp0025/result.json",
+  "pointer": [
+   "datasets",
+   "global_2026",
+   "full",
+   "methods",
+   "G-plus-M5",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N3",
+  "column": "MAE_2026",
+  "file": "experiments/exp0025/result.json",
+  "pointer": [
+   "datasets",
+   "global_2026",
+   "full",
+   "methods",
+   "G-plus-M5",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N5",
+  "column": "RMSE_validation",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "ensemble_table",
+   "validation",
+   "G-geo",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N5",
+  "column": "MAE_validation",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "ensemble_table",
+   "validation",
+   "G-geo",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N5",
+  "column": "RMSE_old_evaluation",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "ensemble_table",
+   "original_evaluation",
+   "G-geo",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N5",
+  "column": "MAE_old_evaluation",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "ensemble_table",
+   "original_evaluation",
+   "G-geo",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N5",
+  "column": "RMSE_2023_2025",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "ensemble_table",
+   "extension_evaluation",
+   "G-geo",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N5",
+  "column": "MAE_2023_2025",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "ensemble_table",
+   "extension_evaluation",
+   "G-geo",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N5",
+  "column": "RMSE_2026",
+  "file": "experiments/exp0025/result.json",
+  "pointer": [
+   "datasets",
+   "global_2026",
+   "full",
+   "methods",
+   "G-geo5",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N5",
+  "column": "MAE_2026",
+  "file": "experiments/exp0025/result.json",
+  "pointer": [
+   "datasets",
+   "global_2026",
+   "full",
+   "methods",
+   "G-geo5",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N7",
+  "column": "RMSE_validation",
+  "file": "experiments/exp0013/result.json",
+  "pointer": [
+   "ensemble_table",
+   "validation",
+   "PI",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N7",
+  "column": "MAE_validation",
+  "file": "experiments/exp0013/result.json",
+  "pointer": [
+   "ensemble_table",
+   "validation",
+   "PI",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N7",
+  "column": "RMSE_old_evaluation",
+  "file": "experiments/exp0013/result.json",
+  "pointer": [
+   "ensemble_table",
+   "original_evaluation",
+   "PI",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N7",
+  "column": "MAE_old_evaluation",
+  "file": "experiments/exp0013/result.json",
+  "pointer": [
+   "ensemble_table",
+   "original_evaluation",
+   "PI",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N7",
+  "column": "RMSE_2023_2025",
+  "file": "experiments/exp0013/result.json",
+  "pointer": [
+   "ensemble_table",
+   "extension_evaluation",
+   "PI",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N7",
+  "column": "MAE_2023_2025",
+  "file": "experiments/exp0013/result.json",
+  "pointer": [
+   "ensemble_table",
+   "extension_evaluation",
+   "PI",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N7",
+  "column": "RMSE_2026",
+  "file": "experiments/exp0025/result.json",
+  "pointer": [
+   "datasets",
+   "global_2026",
+   "full",
+   "methods",
+   "PI5",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N7",
+  "column": "MAE_2026",
+  "file": "experiments/exp0025/result.json",
+  "pointer": [
+   "datasets",
+   "global_2026",
+   "full",
+   "methods",
+   "PI5",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N4",
+  "column": "RMSE_validation",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "main_table",
+   "validation",
+   "G-plus-M",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N4",
+  "column": "MAE_validation",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "main_table",
+   "validation",
+   "G-plus-M",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N4",
+  "column": "RMSE_old_evaluation",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "main_table",
+   "original_evaluation",
+   "G-plus-M",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N4",
+  "column": "MAE_old_evaluation",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "main_table",
+   "original_evaluation",
+   "G-plus-M",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N4",
+  "column": "RMSE_old_evaluation_sd",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "main_table",
+   "original_evaluation",
+   "G-plus-M",
+   "all",
+   "RMSE_seed_sd"
+  ]
+ },
+ {
+  "row": "N4",
+  "column": "RMSE_2023_2025",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "main_table",
+   "extension_evaluation",
+   "G-plus-M",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N4",
+  "column": "MAE_2023_2025",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "main_table",
+   "extension_evaluation",
+   "G-plus-M",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N4",
+  "column": "RMSE_2023_2025_sd",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "main_table",
+   "extension_evaluation",
+   "G-plus-M",
+   "all",
+   "RMSE_seed_sd"
+  ]
+ },
+ {
+  "row": "N4",
+  "column": "RMSE_2026",
+  "file": "experiments/exp0025/result.json",
+  "pointer": [
+   "datasets",
+   "global_2026",
+   "full",
+   "seed_metrics",
+   "G-plus-M",
+   "RMSE",
+   "mean"
+  ]
+ },
+ {
+  "row": "N4",
+  "column": "RMSE_2026_sd",
+  "file": "experiments/exp0025/result.json",
+  "pointer": [
+   "datasets",
+   "global_2026",
+   "full",
+   "seed_metrics",
+   "G-plus-M",
+   "RMSE",
+   "sample_sd"
+  ]
+ },
+ {
+  "row": "N4",
+  "column": "MAE_2026",
+  "file": "experiments/exp0025/result.json",
+  "pointer": [
+   "datasets",
+   "global_2026",
+   "full",
+   "seed_metrics",
+   "G-plus-M",
+   "MAE",
+   "mean"
+  ]
+ },
+ {
+  "row": "N4",
+  "column": "MAE_old_evaluation_sd",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "main_table",
+   "original_evaluation",
+   "G-plus-M",
+   "all",
+   "MAE_seed_sd"
+  ]
+ },
+ {
+  "row": "N6",
+  "column": "RMSE_validation",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "main_table",
+   "validation",
+   "G-geo",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N6",
+  "column": "MAE_validation",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "main_table",
+   "validation",
+   "G-geo",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N6",
+  "column": "RMSE_old_evaluation",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "main_table",
+   "original_evaluation",
+   "G-geo",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N6",
+  "column": "MAE_old_evaluation",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "main_table",
+   "original_evaluation",
+   "G-geo",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N6",
+  "column": "RMSE_old_evaluation_sd",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "main_table",
+   "original_evaluation",
+   "G-geo",
+   "all",
+   "RMSE_seed_sd"
+  ]
+ },
+ {
+  "row": "N6",
+  "column": "RMSE_2023_2025",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "main_table",
+   "extension_evaluation",
+   "G-geo",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N6",
+  "column": "MAE_2023_2025",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "main_table",
+   "extension_evaluation",
+   "G-geo",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N6",
+  "column": "RMSE_2023_2025_sd",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "main_table",
+   "extension_evaluation",
+   "G-geo",
+   "all",
+   "RMSE_seed_sd"
+  ]
+ },
+ {
+  "row": "N6",
+  "column": "RMSE_2026",
+  "file": "experiments/exp0025/result.json",
+  "pointer": [
+   "datasets",
+   "global_2026",
+   "full",
+   "seed_metrics",
+   "G-geo",
+   "RMSE",
+   "mean"
+  ]
+ },
+ {
+  "row": "N6",
+  "column": "RMSE_2026_sd",
+  "file": "experiments/exp0025/result.json",
+  "pointer": [
+   "datasets",
+   "global_2026",
+   "full",
+   "seed_metrics",
+   "G-geo",
+   "RMSE",
+   "sample_sd"
+  ]
+ },
+ {
+  "row": "N6",
+  "column": "MAE_2026",
+  "file": "experiments/exp0025/result.json",
+  "pointer": [
+   "datasets",
+   "global_2026",
+   "full",
+   "seed_metrics",
+   "G-geo",
+   "MAE",
+   "mean"
+  ]
+ },
+ {
+  "row": "N6",
+  "column": "MAE_old_evaluation_sd",
+  "file": "experiments/exp0018/result.json",
+  "pointer": [
+   "main_table",
+   "original_evaluation",
+   "G-geo",
+   "all",
+   "MAE_seed_sd"
+  ]
+ },
+ {
+  "row": "N8",
+  "column": "RMSE_validation",
+  "file": "experiments/exp0013/result.json",
+  "pointer": [
+   "main_table",
+   "validation",
+   "G",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N8",
+  "column": "MAE_validation",
+  "file": "experiments/exp0013/result.json",
+  "pointer": [
+   "main_table",
+   "validation",
+   "G",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N8",
+  "column": "RMSE_old_evaluation",
+  "file": "experiments/exp0013/result.json",
+  "pointer": [
+   "main_table",
+   "original_evaluation",
+   "G",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N8",
+  "column": "MAE_old_evaluation",
+  "file": "experiments/exp0013/result.json",
+  "pointer": [
+   "main_table",
+   "original_evaluation",
+   "G",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N8",
+  "column": "RMSE_old_evaluation_sd",
+  "file": "experiments/exp0013/result.json",
+  "pointer": [
+   "main_table",
+   "original_evaluation",
+   "G",
+   "all",
+   "RMSE_seed_sd"
+  ]
+ },
+ {
+  "row": "N8",
+  "column": "RMSE_2023_2025",
+  "file": "experiments/exp0013/result.json",
+  "pointer": [
+   "main_table",
+   "extension_evaluation",
+   "G",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N8",
+  "column": "MAE_2023_2025",
+  "file": "experiments/exp0013/result.json",
+  "pointer": [
+   "main_table",
+   "extension_evaluation",
+   "G",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N8",
+  "column": "RMSE_2023_2025_sd",
+  "file": "experiments/exp0013/result.json",
+  "pointer": [
+   "main_table",
+   "extension_evaluation",
+   "G",
+   "all",
+   "RMSE_seed_sd"
+  ]
+ },
+ {
+  "row": "N8",
+  "column": "RMSE_2026",
+  "file": "experiments/exp0025/result.json",
+  "pointer": [
+   "datasets",
+   "global_2026",
+   "full",
+   "seed_metrics",
+   "G",
+   "RMSE",
+   "mean"
+  ]
+ },
+ {
+  "row": "N8",
+  "column": "RMSE_2026_sd",
+  "file": "experiments/exp0025/result.json",
+  "pointer": [
+   "datasets",
+   "global_2026",
+   "full",
+   "seed_metrics",
+   "G",
+   "RMSE",
+   "sample_sd"
+  ]
+ },
+ {
+  "row": "N8",
+  "column": "MAE_2026",
+  "file": "experiments/exp0025/result.json",
+  "pointer": [
+   "datasets",
+   "global_2026",
+   "full",
+   "seed_metrics",
+   "G",
+   "MAE",
+   "mean"
+  ]
+ },
+ {
+  "row": "N9",
+  "column": "RMSE_validation",
+  "file": "experiments/exp0013/result.json",
+  "pointer": [
+   "main_table",
+   "validation",
+   "PI",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N9",
+  "column": "MAE_validation",
+  "file": "experiments/exp0013/result.json",
+  "pointer": [
+   "main_table",
+   "validation",
+   "PI",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N9",
+  "column": "RMSE_old_evaluation",
+  "file": "experiments/exp0013/result.json",
+  "pointer": [
+   "main_table",
+   "original_evaluation",
+   "PI",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N9",
+  "column": "MAE_old_evaluation",
+  "file": "experiments/exp0013/result.json",
+  "pointer": [
+   "main_table",
+   "original_evaluation",
+   "PI",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N9",
+  "column": "RMSE_old_evaluation_sd",
+  "file": "experiments/exp0013/result.json",
+  "pointer": [
+   "main_table",
+   "original_evaluation",
+   "PI",
+   "all",
+   "RMSE_seed_sd"
+  ]
+ },
+ {
+  "row": "N9",
+  "column": "RMSE_2023_2025",
+  "file": "experiments/exp0013/result.json",
+  "pointer": [
+   "main_table",
+   "extension_evaluation",
+   "PI",
+   "all",
+   "RMSE"
+  ]
+ },
+ {
+  "row": "N9",
+  "column": "MAE_2023_2025",
+  "file": "experiments/exp0013/result.json",
+  "pointer": [
+   "main_table",
+   "extension_evaluation",
+   "PI",
+   "all",
+   "MAE"
+  ]
+ },
+ {
+  "row": "N9",
+  "column": "RMSE_2023_2025_sd",
+  "file": "experiments/exp0013/result.json",
+  "pointer": [
+   "main_table",
+   "extension_evaluation",
+   "PI",
+   "all",
+   "RMSE_seed_sd"
+  ]
+ },
+ {
+  "row": "N9",
+  "column": "RMSE_2026",
+  "file": "experiments/exp0025/result.json",
+  "pointer": [
+   "datasets",
+   "global_2026",
+   "full",
+   "seed_metrics",
+   "PI",
+   "RMSE",
+   "mean"
+  ]
+ },
+ {
+  "row": "N9",
+  "column": "RMSE_2026_sd",
+  "file": "experiments/exp0025/result.json",
+  "pointer": [
+   "datasets",
+   "global_2026",
+   "full",
+   "seed_metrics",
+   "PI",
+   "RMSE",
+   "sample_sd"
+  ]
+ },
+ {
+  "row": "N9",
+  "column": "MAE_2026",
+  "file": "experiments/exp0025/result.json",
+  "pointer": [
+   "datasets",
+   "global_2026",
+   "full",
+   "seed_metrics",
+   "PI",
+   "MAE",
+   "mean"
+  ]
+ }
+]

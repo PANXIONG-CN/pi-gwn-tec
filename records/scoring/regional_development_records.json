@@ -1,0 +1,16 @@
+{
+ "description": "P95 cut-off of the high-level stratum (computed from persistence values, not from statistics).",
+ "source": "experiments/exp0023/result.json",
+ "regions": {
+  "china": {
+   "2023-2025": {
+    "P95": 86.19999694824219
+   }
+  },
+  "japan": {
+   "2023-2025": {
+    "P95": 50.099998474121094
+   }
+  }
+ }
+}

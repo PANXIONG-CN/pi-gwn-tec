@@ -1,0 +1,76 @@
+internal_name,paper_name,slug,description,source
+G; DO,GWN,gwn,"base Graph WaveNet, previous-day 12 TEC frames only; 'GWN, single-model mean' = metrics of five single models averaged",CONTEXT §4
+G5,GWN five-seed ensemble,gwn-ens,mean prediction of the five GWN seeds,CONTEXT §4
+PI,GWN + penalty (1%),pen1,"penalty gradient scaled to 1% of the data-gradient norm, then projected",CONTEXT §4
+P-0.1,GWN + penalty (10%),pen10,"penalty gradient scaled to 10% of the data-gradient norm, then projected",CONTEXT §4
+P-1.0,GWN + penalty (100%),pen100,"penalty gradient scaled to 100% of the data-gradient norm, then projected",CONTEXT §4
+EMP,GWN + empirical-tendency penalty,penemp,four-coefficient empirical comparator,CONTEXT §4
+D-noIndex,GWN + cosSZA,cossza,single daylight-clipped cosSZA channel,CONTEXT §4
+G-DE,GWN + cosSZA + indices,cossza-idx,"cosSZA plus F10.7, Kp, Dst, AE",CONTEXT §4
+D-noSolar,GWN + cosSZA + geomagnetic indices,cossza-geomag,F10.7 removed,CONTEXT §4
+D-noGeomag,GWN + cosSZA + F10.7,cossza-f107,geomagnetic indices removed,CONTEXT §4
+G-geo,GWN-geo,geo,"season, local time, signed cosSZA",CONTEXT §4
+G-long,GWN-hist,hist,"multi-day history (days 1, 2, 3, 27 before, same time)",CONTEXT §4
+G-MAE,GWN (MAE),gwnmae,GWN trained with MAE loss,CONTEXT §4
+G-plus-M,GWN-geo-hist (MAE),geohist,"geometry + multi-day history, MAE loss",CONTEXT §4
+G-plus-S,GWN-geo-hist (SmoothL1),geohist-sl1,"geometry + multi-day history, SmoothL1 loss",CONTEXT §4
+G-nowrap,GWN without longitude wrap,nowrap,fixed graph without the edges across the longitude seam,CONTEXT §4
+C,SimVP,simvp,convolutional backbone,CONTEXT §4
+C-in,SimVP-clim,simvp-clim,convolutional backbone + climatology input (and geometry),CONTEXT §4
+C-plus,SimVP-clim-hist,simvp-climhist,convolutional backbone + climatology + multi-day history,CONTEXT §4
+S2,multi-family ensemble,mfe,"main system: six families x five seeds, one set of non-negative weights fitted on the validation years",CONTEXT §4
+S1,multi-family ensemble with index family,mfe-idx,sensitivity system including the observed-index family,CONTEXT §4
+mapped S2 (exp0025 'anchor'),zero-shot mapping,zs,multi-family ensemble mapped bilinearly to the regional grid,CONTEXT §4
+"exp0023 final (China R2/G1, Japan R2/G0)",anchored residual model,anchres,anchor + residual; China falls back to the anchor where the previous-day value >= 79.5 TECU,CONTEXT §4
+H-G,96-h GWN,h96-gwn,48-frame direct forecast,CONTEXT §4
+H-PI,96-h GWN + penalty (1%),h96-pen1,48-frame direct forecast,CONTEXT §4
+H-GM,96-h GWN-geo-hist (MAE),h96-geohist,48-frame direct forecast,CONTEXT §4
+method S,static calibration,static,fixed calibration set,CONTEXT §4
+method T,trailing calibration,trailing,"rolling 365 forecast days, D-366..D-2",CONTEXT §4
+persistence,24-h persistence,pers,"previous UT day, same epochs (global and regional)",P1 (provisional; not in CONTEXT §4)
+C1PG,CODE one-day forecast,code,CODE one-day predicted GIM (COD0OPSP0D); reference comparison,P1 (provisional; not in CONTEXT §4)
+mapped_G5,zero-shot mapping (GWN five-seed ensemble),zs-gwn,GWN five-seed ensemble mapped bilinearly to the regional grid,P1 (provisional; not in CONTEXT §4)
+"exp0021_regional (China R1/G1 threshold 61.7, Japan R1/G0)",anchored residual model without the 2014 training year,anchres-no2014,"earlier regional system (training targets 2015, 2019-2021); reference",P1 (provisional; not in CONTEXT §4)
+R1-B_G0 (exp0021 R1-B/G0),"anchored residual model, level-balanced loss (diagnostic)",anchres-bal,"target-level balanced MAE weights, no fallback; diagnostic",P1 (provisional; not in CONTEXT §4)
+product (exp0011),IGS GIM mapped to the regional grid (product difference),product,"mapped IGS labels scored against JPLD labels; reference error, not a forecast",P1 (provisional; not in CONTEXT §4)
+P-adapt,"GWN + adaptive penalty weights, unscaled port",penadapt,invalid port: penalty gradients not rescaled; not evidence (note=invalid_port),P1 (provisional; not in CONTEXT §4)
+"DO-TEC-only (earlier manuscript, matched)",GWN (earlier configuration),old-gwn,earlier training configuration,P1 (provisional; not in CONTEXT §4)
+"PI-TEC-only (earlier manuscript, matched)","GWN + physics penalty, projected (earlier configuration)",old-pen-proj,earlier training configuration; adaptive term weights,P1 (provisional; not in CONTEXT §4)
+DO historical / DO (separately tuned),"GWN, separately tuned (earlier configuration)",old-gwn-tuned,earlier manuscript,P1 (provisional; not in CONTEXT §4)
+PI adaptive / PI_mechanism_legacy,"GWN + physics penalty, adaptive weights, separately tuned (earlier configuration)",old-pen-adapt-tuned,earlier manuscript,P1 (provisional; not in CONTEXT §4)
+DE raw / DE_raw_concat,GWN + raw observed-index inputs (earlier configuration),old-idx-raw,earlier manuscript,P1 (provisional; not in CONTEXT §4)
+TEC-MoLLM / ST_GPT_stable,pretrained Transformer with low-rank adaptation (earlier configuration),old-ptlora,"three pretrained GPT-2-large blocks with LoRA; renamed without 'GPT' (reviewer 1, comment 3)",P1 (provisional; not in CONTEXT §4)
+DE ZScore / DE-ZScore-c05,GWN + standardized observed-index inputs (earlier configuration),old-idx-std,earlier manuscript,P1 (provisional; not in CONTEXT §4)
+PI ZScore projected / PI-RatioProj,"GWN + standardized observed-index inputs + physics penalty, projected (earlier configuration)",old-idx-std-pen,earlier manuscript,P1 (provisional; not in CONTEXT §4)
+DE Gated,GWN + gated observed-index conditioning (earlier configuration),old-idx-gated,earlier manuscript,P1 (provisional; not in CONTEXT §4)
+DE CrossAttn,GWN + cross-attention observed-index conditioning (earlier configuration),old-idx-xattn,earlier manuscript,P1 (provisional; not in CONTEXT §4)
+DE FiLM,GWN + FiLM observed-index conditioning (earlier configuration),old-idx-film,earlier manuscript,P1 (provisional; not in CONTEXT §4)
+GNN-Transformer / GNNTrans_pyramid_common_protocol,graph-Transformer adaptation (earlier configuration),old-graph-transformer,adaptation of Liu and Jiang (2025); not an exact reproduction,P1 (provisional; not in CONTEXT §4)
+C-gate (exp0032),"GWN + cosSZA + indices, gated fusion",cossza-idx-gate,same five driver channels as GWN + cosSZA + indices; history residual gate; strong configuration,Tier C (2026-11-18; not in CONTEXT §4)
+C-film (exp0032),"GWN + cosSZA + indices, FiLM",cossza-idx-film,"same five driver channels; feature-wise linear modulation, zero-initialized; strong configuration",Tier C (2026-11-18; not in CONTEXT §4)
+C-xattn (exp0032),"GWN + cosSZA + indices, cross-attention",cossza-idx-xattn,same five driver channels; node-wise causal temporal cross-attention; strong configuration,Tier C (2026-11-18; not in CONTEXT §4)
+GT (exp0032),graph-Transformer adaptation,graph-transformer,adaptation of Liu and Jiang (2025) trained with the strong configuration; not an exact reproduction,Tier C (2026-11-18; not in CONTEXT §4)
+"S2, rapid inputs (exp0033 R)","multi-family ensemble, rapid-map inputs",mfe-rapid,frozen models; every input day from IGS rapid maps,Tier C (2026-11-18; not in CONTEXT §4)
+"S2, forecast-time inputs (exp0033 P)","multi-family ensemble, forecast-time inputs",mfe-avail,"frozen models; previous day from the CODE one-day forecast, days 2-3 before from rapid maps, day 27 before from final maps",Tier C (2026-11-18; not in CONTEXT §4)
+"G5, rapid inputs (exp0033 R)","GWN five-seed ensemble, rapid-map inputs",gwn-ens-rapid,frozen models; previous day from IGS rapid maps,Tier C (2026-11-18; not in CONTEXT §4)
+"G5, forecast-time inputs (exp0033 P)","GWN five-seed ensemble, forecast-time inputs",gwn-ens-avail,frozen models; previous day from the CODE one-day forecast,Tier C (2026-11-18; not in CONTEXT §4)
+T-nonneg (exp0031),GWN + non-negativity term (10%),term-nonneg,"single penalty term at 10% of the data-gradient norm, projected",Tier C (2026-11-18; not in CONTEXT §4)
+T-rot (exp0031),GWN + ROT term (10%),term-rot,"single penalty term at 10% of the data-gradient norm, projected",Tier C (2026-11-18; not in CONTEXT §4)
+T-roti (exp0031),GWN + TSI term (10%),term-tsi,"single penalty term at 10% of the data-gradient norm, projected",Tier C (2026-11-18; not in CONTEXT §4)
+T-diffusion (exp0031),GWN + graph-temporal term (10%),term-graph,"single penalty term at 10% of the data-gradient norm, projected",Tier C (2026-11-18; not in CONTEXT §4)
+T-chemistry (exp0031),GWN + production-loss term (10%),term-prodloss,"single penalty term at 10% of the data-gradient norm, projected",Tier C (2026-11-18; not in CONTEXT §4)
+T-night (exp0031),GWN + nighttime term (10%),term-night,"single penalty term at 10% of the data-gradient norm, projected",Tier C (2026-11-18; not in CONTEXT §4)
+N-gate (exp0031),GWN + gated nighttime term (10%),term-night-gated,nighttime term applied only in training-year bins where TEC decayed in at least 75% of nighttime transitions,Tier C (2026-11-18; not in CONTEXT §4)
+P-gate (exp0031),"GWN + penalty (10%), gated nighttime term",pen10-gated,six terms with the nighttime term gated,Tier C (2026-11-18; not in CONTEXT §4)
+F-local (exp0031),"GWN, fixed graph only",gwn-fixed,"fixed eight-neighbour support, adaptive adjacency off",Tier C (2026-11-18; not in CONTEXT §4)
+F-local-P (exp0031),"GWN, fixed graph only + penalty (10%)",gwn-fixed-pen10,factorial cell,Tier C (2026-11-18; not in CONTEXT §4)
+F-adapt (exp0031),"GWN, adaptive graph only",gwn-adapt,"adaptive adjacency only, initialized from the fixed graph",Tier C (2026-11-18; not in CONTEXT §4)
+F-adapt-P (exp0031),"GWN, adaptive graph only + penalty (10%)",gwn-adapt-pen10,factorial cell,Tier C (2026-11-18; not in CONTEXT §4)
+F-none (exp0031),GWN without graph convolution,gwn-nograph,graph convolution off,Tier C (2026-11-18; not in CONTEXT §4)
+F-none-P (exp0031),GWN without graph convolution + penalty (10%),gwn-nograph-pen10,factorial cell,Tier C (2026-11-18; not in CONTEXT §4)
+S-P (exp0031),SimVP + penalty (10%),simvp-pen10,convolutional backbone with the six-term penalty at 10%,Tier C (2026-11-18; not in CONTEXT §4)
+Mixer-SimVP,external Mixer-SimVP checkpoint,mixer-simvp,released checkpoint of Liu et al.; training years may overlap the evaluation years,P1 (provisional; not in CONTEXT §4)
+IRI-2020,IRI-2020,iri2020,empirical model,P1 (provisional; not in CONTEXT §4)
+PredRNN,PredRNN,predrnn,original nine-model summary,P1 (provisional; not in CONTEXT §4)
+ConvLSTM,ConvLSTM,convlstm,original nine-model summary,P1 (provisional; not in CONTEXT §4)
+CSA-WTConvLSTM,CSA-WTConvLSTM,csa-wtconvlstm,original nine-model summary,P1 (provisional; not in CONTEXT §4)

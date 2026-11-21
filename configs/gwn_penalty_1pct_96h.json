@@ -1,0 +1,147 @@
+{
+ "paper_name": "96-h GWN + penalty (1%)",
+ "slug": "h96-pen1",
+ "family": "h96",
+ "train_entry": "tecfc.training.train_96h",
+ "seeds": [
+  42,
+  1024,
+  2025,
+  3407,
+  5000
+ ],
+ "runtime_config": {
+  "arm": "H-PI",
+  "asset_root": "{ASSETS}",
+  "asset_sha256": {
+   "prepared/graph_svd_v1.npz": "193cc847e4d40770a9db5907075f9faf50c29e9adcc30eefe93de25f1a0fd9f1",
+   "prepared/train_climatology_v1.npz": "d0866c1c49362d06814e6051c69dec5ada015fb7f011a1a22ba105b029d61871"
+  },
+  "data_files": {
+   "2009": {
+    "path": "{GIMTEC}/TEC_2009.npy",
+    "sha256": "c5d4f7e11275a139e0683052f4265de9dc28308f6004388d8dc1f0dc7bcd6276"
+   },
+   "2010": {
+    "path": "{GIMTEC}/TEC_2010.npy",
+    "sha256": "3697ccdb940ba20c562b07828a1c4a72eb409933cbcab3bb081765ec2bea8106"
+   },
+   "2011": {
+    "path": "{GIMTEC}/TEC_2011.npy",
+    "sha256": "03f14389051bdbe194b6d240b7e100f89b3d194ae0e80d97f6c753bf75613a34"
+   },
+   "2012": {
+    "path": "{GIMTEC}/TEC_2012.npy",
+    "sha256": "480a55461120059a351a8d8fe9c46024259a4355ff1644a92db6f975dc649883"
+   },
+   "2013": {
+    "path": "{GIMTEC}/TEC_2013.npy",
+    "sha256": "de90118f20227a207550fdd9df5de71db629b12303632b96954f48b44ba52f85"
+   },
+   "2014": {
+    "path": "{GIMTEC}/TEC_2014.npy",
+    "sha256": "7ccb184e14d32b3ebbc6fad435c0b0871f32837a8fb54c17004447c466b01c5f"
+   },
+   "2016": {
+    "path": "{GIMTEC}/TEC_2016.npy",
+    "sha256": "e435ad612c21a4feb9234c3958730de5042721db22ccb6f282a6de320dfc3e5f"
+   },
+   "2017": {
+    "path": "{GIMTEC}/TEC_2017.npy",
+    "sha256": "830e2c7c137702603c5fae203cee236b90b4c6fb87ada5f6fd84f2475208526b"
+   },
+   "2018": {
+    "path": "{GIMTEC}/TEC_2018.npy",
+    "sha256": "5b9c2adeca4622af4ee457032466c0439be0b21180c5681b7514b3df9d81c0c3"
+   }
+  },
+  "expected_initial_tensor_sha256": null,
+  "experiment": "exp0027",
+  "group_id": "exp0027_h96_fixed200",
+  "history_only_files": {
+   "2015": {
+    "path": "{GIMTEC}/TEC_2015.npy",
+    "sha256": "e554414992025bd2a664e8d26a390ee97b0da3bc6ac68848f2c96195c21cb39e",
+    "allowed_dates": [
+     "2015-12-06",
+     "2015-12-07",
+     "2015-12-08",
+     "2015-12-09",
+     "2015-12-10",
+     "2015-12-11",
+     "2015-12-12",
+     "2015-12-13",
+     "2015-12-14",
+     "2015-12-15",
+     "2015-12-16",
+     "2015-12-17",
+     "2015-12-18",
+     "2015-12-19",
+     "2015-12-20",
+     "2015-12-21",
+     "2015-12-22",
+     "2015-12-23",
+     "2015-12-24",
+     "2015-12-25",
+     "2015-12-26",
+     "2015-12-27",
+     "2015-12-28",
+     "2015-12-29",
+     "2015-12-30",
+     "2015-12-31"
+    ]
+   }
+  },
+  "horizon": 48,
+  "loss": "smooth_l1",
+  "physics": {
+   "driver": "{GIMTEC}/drivers/drivers_2009_2022_2h.npz",
+   "driver_sha256": "fbd0a9eea7075fde4c79915fa862a86944ad9b2e7c4f93894743e87bba1ba645",
+   "adjacency": "{ASSETS}/gim_adj.npy",
+   "adjacency_sha256": "c5e278353e30339f66d78ca08e4c29305a435d1f40db2f9ee3d26ecd6883cd00"
+  },
+  "recipe": {
+   "scale": 147.1,
+   "batch_size": 32,
+   "optimizer": "Adam lr=0.003 weight_decay=0",
+   "gradient_clip": 5.0,
+   "precision": "bf16 autocast",
+   "scheduler": "ReduceLROnPlateau factor=.9 patience=5 threshold=1e-5 abs cooldown=10 min_lr=0",
+   "epochs": 200,
+   "selection": "first strictly lowest pooled 48-lead validation RMSE",
+   "graph": "prepared/graph_svd_v1.npz periodic 71x72"
+  },
+  "reference_root": "{TECFC}/models/gwn_reference",
+  "reference_sha256": {
+   "gim_data.py": "1e557f539683394e72f88c9e64a1fcb3654a803736e2c73b432430e0aa3d1bf2",
+   "global_model.py": "09ae2e5f2ed5a18ddb498aa394fb4a1c108a4ba15c1b8ae59af43c06128f2d32",
+   "model/GWN/GWN.py": "3a2ff52ed880498f1faba94be8fadabec9b74d41da4ec450da4c403b29b25b1b",
+   "model/GWN/driver_fusion.py": "85c925220fc2f82765ea658172ff102a7bdb49e30ed541308b73156444b6bc45",
+   "lib/physics/driver_scaler.py": "8db60ece0ceab95484089c49f93590015b67a3e94c160d1389a9b70df32388bc"
+  },
+  "rho": 0.01,
+  "runtime": {
+   "torch": "2.9.1+cu128",
+   "cuda": "12.8",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+  },
+  "schema": "exp0027_h96_v1"
+ },
+ "per_seed": {
+  "42": {
+   "seed": 42
+  },
+  "1024": {
+   "seed": 1024
+  },
+  "2025": {
+   "seed": 2025
+  },
+  "3407": {
+   "seed": 3407
+  },
+  "5000": {
+   "seed": 5000
+  }
+ }
+}

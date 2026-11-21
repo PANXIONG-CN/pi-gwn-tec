@@ -1,0 +1,40 @@
+{
+ "description": "Prepared model assets. npz files are compared by array content because zip member timestamps differ when they are regenerated.",
+ "content_digest": "sha256 over dtype.str + \"|\" + str(shape) + \"|\" + array bytes, per array",
+ "assets": {
+  "gim_adj.npy": {
+   "sha256": "c5e278353e30339f66d78ca08e4c29305a435d1f40db2f9ee3d26ecd6883cd00",
+   "made_by": "legacy/lib/datasets/gimtec_adj.py build_grid8_adj(71, 73), np.save",
+   "byte_identical": true
+  },
+  "prepared/graph_svd_v1.npz": {
+   "sha256": "193cc847e4d40770a9db5907075f9faf50c29e9adcc30eefe93de25f1a0fd9f1",
+   "content_sha256": {
+    "data": "6f0aab370260ae41e5205567c9eca5fb498d67c76ec0453454a503096e1639a7",
+    "indices": "c11999e98ada5e5e00af2c75ef70ef5df7204162d74ec364a4f6a1358155eda7",
+    "indptr": "43a2a55e402ee32f9f0aa8ad413bed31f1dd131159df7c74cf7f8f6dd03d5501",
+    "s": "dfe15964f4afe2b93506d4f395a57c9cab616b607e35aa73540c8b6de72b8d28",
+    "shape": "b2195de21966ba322e249d75a698c195fcb66e87053dab6171486c3e1da8b88d",
+    "u": "44b134b5cac726937fa27dd530fa704db493a32664a2112dbe125e29728c893a",
+    "v": "6029a019dedd73f094e4db713f7ee8b0272d7dab5048dd9ef98d3b20809579d0"
+   },
+   "made_by": "tecfc/models/gwn_reference/prepare_graph.py gim_adj.npy",
+   "byte_identical": false
+  },
+  "prepared/train_climatology_v1.npz": {
+   "sha256": "d0866c1c49362d06814e6051c69dec5ada015fb7f011a1a22ba105b029d61871",
+   "content_sha256": {
+    "climatology": "1e8d494d0d302736ab25ae0a56ac3a6ed894659067ad3028aa3f7c316cd38e42",
+    "counts": "639154934955522d353976806583264fa244c0d4474f077f1c1ab62342ff9f07",
+    "scale": "c7a9c7a21ab561c1e27dedcffe6375f611beffaba00257eaa5747cf65a2c1e1b"
+   },
+   "made_by": "tecfc/models/gwn_reference/gim_data.py climatology (training years 2009-2012, 2014, 2016, 2018)",
+   "byte_identical": false
+  },
+  "prepared/geometry.npy": {
+   "sha256": "04113c69e8fd98113888fd911bd01ead9d3fe6e9177bac33692e06bc1f0b97b6",
+   "made_by": "tecfc/models/simvp_reference/prepare_geometry.py",
+   "byte_identical": true
+  }
+ }
+}

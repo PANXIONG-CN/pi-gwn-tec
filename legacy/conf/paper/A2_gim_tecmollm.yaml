@@ -1,0 +1,21 @@
+# Paper protocol (Batch A2): GIMtec TEC-MoLLM
+data:
+  lag: 12
+  horizon: 12
+
+train:
+  year_split: true
+  stride_horizon: true
+  prefix_boundary: true
+  epochs: 200
+  early_stop: true
+  early_stop_patience: 20
+  amp: true
+  debug: false
+
+predictor:
+  use_lora: true
+  d_llm: 1280
+  llm_layers: 3
+  hf_model_name: "openai-community/gpt2-large"
+  hf_cache_dir: "data/hf_cache"

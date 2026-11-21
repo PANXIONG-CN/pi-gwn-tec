@@ -1,0 +1,210 @@
+{
+ "paper_name": "GWN + penalty (100%)",
+ "slug": "pen100",
+ "family": "ablation",
+ "train_entry": "tecfc.training.train_ablation",
+ "seeds": [
+  42,
+  1024,
+  2025,
+  3407,
+  5000
+ ],
+ "runtime_config": {
+  "arm": "P-1.0",
+  "asset_root": "{ASSETS}",
+  "asset_sha256": {
+   "prepared/graph_svd_v1.npz": "193cc847e4d40770a9db5907075f9faf50c29e9adcc30eefe93de25f1a0fd9f1",
+   "prepared/train_climatology_v1.npz": "d0866c1c49362d06814e6051c69dec5ada015fb7f011a1a22ba105b029d61871"
+  },
+  "check_references": {
+   "G": {
+    "path": "{RECORDS}/training_logs/gwn_42_epochs.jsonl",
+    "sha256": "427cb0664d27b2b9d17d7a42678fc0a90aa649da8e59c3059c8abc22bc214d3c"
+   },
+   "PI": {
+    "path": "{RECORDS}/training_logs/gwn_penalty_1pct_42_epochs.jsonl",
+    "sha256": "a92e83bb9cf74ea81e9e9c53fae96be201e2405bada0d7bf4ec30d2984276a81"
+   },
+   "G-DE": {
+    "path": "{RECORDS}/training_logs/gwn_cossza_indices_42_epochs.jsonl",
+    "sha256": "dacb2dc1a2d6d8a5d6128cd2b18638e32b84fbc0c3e3a1c19cb47b2f70e11e27"
+   }
+  },
+  "data_files": {
+   "2009": {
+    "path": "{GIMTEC}/TEC_2009.npy",
+    "sha256": "c5d4f7e11275a139e0683052f4265de9dc28308f6004388d8dc1f0dc7bcd6276"
+   },
+   "2010": {
+    "path": "{GIMTEC}/TEC_2010.npy",
+    "sha256": "3697ccdb940ba20c562b07828a1c4a72eb409933cbcab3bb081765ec2bea8106"
+   },
+   "2011": {
+    "path": "{GIMTEC}/TEC_2011.npy",
+    "sha256": "03f14389051bdbe194b6d240b7e100f89b3d194ae0e80d97f6c753bf75613a34"
+   },
+   "2012": {
+    "path": "{GIMTEC}/TEC_2012.npy",
+    "sha256": "480a55461120059a351a8d8fe9c46024259a4355ff1644a92db6f975dc649883"
+   },
+   "2013": {
+    "path": "{GIMTEC}/TEC_2013.npy",
+    "sha256": "de90118f20227a207550fdd9df5de71db629b12303632b96954f48b44ba52f85"
+   },
+   "2014": {
+    "path": "{GIMTEC}/TEC_2014.npy",
+    "sha256": "7ccb184e14d32b3ebbc6fad435c0b0871f32837a8fb54c17004447c466b01c5f"
+   },
+   "2016": {
+    "path": "{GIMTEC}/TEC_2016.npy",
+    "sha256": "e435ad612c21a4feb9234c3958730de5042721db22ccb6f282a6de320dfc3e5f"
+   },
+   "2017": {
+    "path": "{GIMTEC}/TEC_2017.npy",
+    "sha256": "830e2c7c137702603c5fae203cee236b90b4c6fb87ada5f6fd84f2475208526b"
+   },
+   "2018": {
+    "path": "{GIMTEC}/TEC_2018.npy",
+    "sha256": "5b9c2adeca4622af4ee457032466c0439be0b21180c5681b7514b3df9d81c0c3"
+   }
+  },
+  "driver": {
+   "path": "{GIMTEC}/drivers/drivers_2009_2025_2h.npz",
+   "sha256": "7be48d63d9f1ad93f4785aa61c1af1cac134872ce223201d21f0becf54271f4e"
+  },
+  "geometry_definition": {
+   "season": "actual calendar year length and fractional UTC day",
+   "localtime": "(UTC_hours+longitude/15) mod24",
+   "cosSZA": "NOAA 365-day gamma at day start, exact original float64 operation order; G-DE daylight clip, G-geo signed"
+  },
+  "group_id": "exp0026_supplement_fixed200",
+  "history_only_files": {
+   "2015": {
+    "path": "{GIMTEC}/TEC_2015.npy",
+    "sha256": "e554414992025bd2a664e8d26a390ee97b0da3bc6ac68848f2c96195c21cb39e",
+    "allowed_dates": [
+     "2015-12-06",
+     "2015-12-07",
+     "2015-12-08",
+     "2015-12-09",
+     "2015-12-10",
+     "2015-12-11",
+     "2015-12-12",
+     "2015-12-13",
+     "2015-12-14",
+     "2015-12-15",
+     "2015-12-16",
+     "2015-12-17",
+     "2015-12-18",
+     "2015-12-19",
+     "2015-12-20",
+     "2015-12-21",
+     "2015-12-22",
+     "2015-12-23",
+     "2015-12-24",
+     "2015-12-25",
+     "2015-12-26",
+     "2015-12-27",
+     "2015-12-28",
+     "2015-12-29",
+     "2015-12-30",
+     "2015-12-31"
+    ]
+   }
+  },
+  "loss": "smooth_l1",
+  "physics": {
+   "driver": "{GIMTEC}/drivers/drivers_2009_2022_2h.npz",
+   "driver_sha256": "fbd0a9eea7075fde4c79915fa862a86944ad9b2e7c4f93894743e87bba1ba645",
+   "adjacency": "{ASSETS}/gim_adj.npy",
+   "adjacency_sha256": "c5e278353e30339f66d78ca08e4c29305a435d1f40db2f9ee3d26ecd6883cd00",
+   "empirical_root": "{TECFC}/objectives/empirical",
+   "empirical_sha256": {
+    "COEFFICIENTS.json": "4732b60d237f1dc2826aa8898dca516499d70e61bb806329a32c4e424e349435",
+    "empirical_tendency.py": "969e67f44e8fcf50e4ca3679013e6ca9bb5183dd6355d45147a2e9cd0171aca5"
+   },
+   "PI_channels": [
+    "F107",
+    "AE",
+    "Dst",
+    "cosSZA"
+   ],
+   "EMP_channels": [
+    "F107",
+    "AE",
+    "cosSZA"
+   ]
+  },
+  "recipe": {
+   "epochs": 200,
+   "scale": 147.1,
+   "loss": "smooth_l1",
+   "beta": 1,
+   "batch": 32,
+   "optimizer": "Adam",
+   "lr": 0.003,
+   "weight_decay": 0,
+   "clip": 5,
+   "precision": "bf16",
+   "plateau": {
+    "factor": 0.9,
+    "patience": 5,
+    "threshold": 1e-05,
+    "threshold_mode": "abs",
+    "cooldown": 10
+   },
+   "selection": "first_strict_minimum_pooled_validation_RMSE"
+  },
+  "reference_epochs": "{RECORDS}/training_logs/gwn_42_epochs.jsonl",
+  "reference_epochs_sha256": "427cb0664d27b2b9d17d7a42678fc0a90aa649da8e59c3059c8abc22bc214d3c",
+  "reference_root": "{TECFC}/models/gwn_reference",
+  "reference_sha256": {
+   "gim_data.py": "1e557f539683394e72f88c9e64a1fcb3654a803736e2c73b432430e0aa3d1bf2",
+   "global_model.py": "09ae2e5f2ed5a18ddb498aa394fb4a1c108a4ba15c1b8ae59af43c06128f2d32",
+   "model/GWN/GWN.py": "3a2ff52ed880498f1faba94be8fadabec9b74d41da4ec450da4c403b29b25b1b",
+   "model/GWN/driver_fusion.py": "85c925220fc2f82765ea658172ff102a7bdb49e30ed541308b73156444b6bc45",
+   "lib/physics/driver_scaler.py": "8db60ece0ceab95484089c49f93590015b67a3e94c160d1389a9b70df32388bc"
+  },
+  "rho": 1.0,
+  "runtime": {
+   "torch": "2.9.1+cu128",
+   "cuda": "12.8",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+  },
+  "scaler": {
+   "path": "{CONFIGS}/inputs/driver_scaler.json",
+   "sha256": "1e7262c19ee65c196b35ec7ff7a7a303e651857c7f7ffa0a2b0c72907a584cb2"
+  },
+  "schema": "global_gwn_development_v1"
+ },
+ "per_seed": {
+  "42": {
+   "expected_initial_tensor_sha256": "4316edafc4d1eb5bcd00b28106810aca3d3537fcd0369eaa300cff5d24d25718",
+   "seed": 42
+  },
+  "1024": {
+   "expected_initial_tensor_sha256": "200ee369bd5de022b89e978456e36001f4c4de887962602886500b427fe9b1c2",
+   "seed": 1024
+  },
+  "2025": {
+   "expected_initial_tensor_sha256": "d8415f1b2e465afac088a2c6ec7db7314fba6cadc9b6fcdbd00ef783166ed37f",
+   "seed": 2025
+  },
+  "3407": {
+   "expected_initial_tensor_sha256": "68e9add0ed799b8b59ab23480827d302e17319f709fbe01b3d6c94e2794a5b3d",
+   "seed": 3407
+  },
+  "5000": {
+   "expected_initial_tensor_sha256": "e9a64e70bac5f9e91410e7b7f8f00b7536b08b35b0d3fa009704074d120ccd93",
+   "seed": 5000
+  }
+ },
+ "release_hash_changes": {
+  "physics/empirical_sha256/COEFFICIENTS.json": {
+   "original_sha256": "1937e6104e0e11beade16426706bb8ba01d747055c4f9e8fa347df4b8ddb061c",
+   "release_sha256": "4732b60d237f1dc2826aa8898dca516499d70e61bb806329a32c4e424e349435",
+   "reason": "absolute location in a metadata field made relative; coefficients unchanged"
+  }
+ }
+}

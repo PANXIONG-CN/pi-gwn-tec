@@ -1,0 +1,38 @@
+{
+ "paper_name": "GWN",
+ "slug": "gwn",
+ "family": "gwn_reference",
+ "train_entry": "tecfc/models/gwn_reference/train_global.py",
+ "seeds": [
+  42,
+  1024,
+  2025,
+  3407,
+  5000
+ ],
+ "identities": {
+  "42": "G_42",
+  "1024": "G_1024",
+  "2025": "G_2025",
+  "3407": "G_3407",
+  "5000": "G_5000"
+ },
+ "recipe": {
+  "epochs": 200,
+  "batch_size": 32,
+  "eval_batch_size": 32,
+  "lr": 0.003,
+  "weight_decay": 0,
+  "gradient_clip": 5
+ },
+ "recipe_record": "tecfc/models/gwn_reference/SCIENTIFIC_FREEZE.json",
+ "prepared_assets": [
+  "prepared/train_climatology_v1.npz",
+  "prepared/graph_svd_v1.npz"
+ ],
+ "data": {
+  "gim": "{GIMTEC}",
+  "gim_extension": "{GIMTEC}"
+ },
+ "note": "Self-contained training directory: run.py copies it into the output directory, links {GIMTEC} as data/gim and data/gim_extension and the prepared assets, then runs train_global.py train --identity <identity>; outputs go to runs/<identity>/ (validation, original and 2023-2025 predictions included)."
+}

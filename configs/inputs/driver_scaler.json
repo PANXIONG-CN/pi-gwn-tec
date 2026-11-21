@@ -1,0 +1,95 @@
+{
+  "schema_version": "cac_r1.driver_scaler.v1",
+  "status": "FROZEN_MACHINE_DERIVED",
+  "dataset": "gim_unique72_exp0015",
+  "scaler_id": "exp0015_train_zscore_71x72",
+  "channel_order": [
+    "AE",
+    "Dst",
+    "Kp",
+    "F107",
+    "cosSZA"
+  ],
+  "fit_roles": [
+    "train"
+  ],
+  "fit_train_years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2014,
+    2016,
+    2018
+  ],
+  "timestamp_count": 30684,
+  "unique_timestamp_count": 30684,
+  "train_timestamp_sha256": "bb25419630d71cc1ec9398eed5b8721911b9f6fae56369671a38311988eea617",
+  "grid_shape": [
+    71,
+    72
+  ],
+  "num_nodes": 5112,
+  "source_driver_relative_path": "output/gimtec-v2-20261013/drivers_2009_2025_2h.npz",
+  "source_driver_sha256": "7be48d63d9f1ad93f4785aa61c1af1cac134872ce223201d21f0becf54271f4e",
+  "imputation_policy": "none",
+  "role_access": {
+    "included_roles": [
+      "train"
+    ],
+    "validation_values_included": 0,
+    "evaluation_values_included": 0,
+    "non_train_values_included": 0
+  },
+  "algorithm": {
+    "timestamp_weighting": "each_unique_train_timestamp_once",
+    "global_channel_weighting": "one_value_per_timestamp",
+    "cosSZA_weighting": "one_value_per_timestamp_per_node",
+    "zscore": "population_mean_and_standard_deviation",
+    "ddof": 0,
+    "cosSZA_algorithm_id": "noaa_fractional_year_365_float64_daylight_clip_v1",
+    "cosSZA_chunk_size_timestamps": 128
+  },
+  "channels": {
+    "AE": {
+      "mean": 140.831052014079,
+      "standard_deviation": 167.78992367138312,
+      "count": 30684,
+      "minimum": 3.0,
+      "maximum": 1741.0,
+      "input_values_sha256": "aac5f5eed30aa29f2eb3a3a6c41c578e8a3f0dd6752500b27d54d490331bae79"
+    },
+    "Dst": {
+      "mean": -9.526984747751271,
+      "standard_deviation": 15.22281675432507,
+      "count": 30684,
+      "minimum": -175.0,
+      "maximum": 77.0,
+      "input_values_sha256": "67b2625dbfeaae42c98aa8c019d48827982763f6b421a5113c448a30b657b302"
+    },
+    "Kp": {
+      "mean": 1.471750749218512,
+      "standard_deviation": 1.1961946706314277,
+      "count": 30684,
+      "minimum": 0.0,
+      "maximum": 8.0,
+      "input_values_sha256": "951d0078b27e5d7e37912846ca6b6bccc2d1de4820f4262edecfd6d12e318bef"
+    },
+    "F107": {
+      "mean": 98.35193595841474,
+      "standard_deviation": 31.148045536251402,
+      "count": 30684,
+      "minimum": 65.5,
+      "maximum": 253.3000030517578,
+      "input_values_sha256": "7308504f16286fd27fb01e2b488a589dbf3f401412dcf4d426707e90bd7b1960"
+    },
+    "cosSZA": {
+      "mean": 0.22051809050907442,
+      "standard_deviation": 0.29599527850394064,
+      "count": 156856608,
+      "minimum": 0.0,
+      "maximum": 0.999996128039423,
+      "input_values_sha256": "cb23615af2d511af228782eb99667588e2e9ca13cbffaba1ff952e4423d52e1d"
+    }
+  }
+}

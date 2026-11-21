@@ -1,0 +1,28 @@
+{
+ "description": "Training-time checks of the penalty and empirical-tendency arms (gradient ratios before projection, projection trigger fractions, batch counts); recorded during training, not functions of the daily statistics.",
+ "source": "experiments/exp0013/result.json",
+ "checks": {
+  "C": {
+   "arms": {
+    "PI": {
+     "auxiliary": {
+      "auxiliary_ratio_before": {
+       "median": 0.01
+      },
+      "projection_trigger_fraction": 0.0375,
+      "batches": 80
+     }
+    },
+    "EMP": {
+     "auxiliary": {
+      "auxiliary_ratio_before": {
+       "median": 0.01
+      },
+      "projection_trigger_fraction": 0.0875,
+      "batches": 80
+     }
+    }
+   }
+  }
+ }
+}

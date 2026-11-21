@@ -1,0 +1,23 @@
+# Historical manuscript PI: drivers affect the training loss only.
+data:
+  lag: 12
+  horizon: 12
+train:
+  batch_size: 96
+  accumulate_steps: 2
+  amp: true
+  year_split: true
+  stride_horizon: true
+  prefix_boundary: true
+  epochs: 200
+  early_stop: true
+  early_stop_patience: 20
+  debug: false
+physics:
+  use_pinn: true
+  use_drivers: true
+  use_drivers_input: false
+  use_diffusion: true
+  use_adv: true
+  nochem: false
+  lambda_phys: 0.1

@@ -1,0 +1,89 @@
+{
+  "status": "frozen",
+  "question": "Independent global C vs D representation comparison; no physics; no Japanese success prerequisite",
+  "source_of_authorization": "EXECUTION_HANDOFF_CN.txt and PRO_REVIEW_RESPONSE_CN.txt, 2026-11-07",
+  "experiment_document_sha256": "6ab2afe47d7d23f423bd471654d1796513d8f5d7accc985ce65d853c4c2bfe34",
+  "epochs": 200,
+  "batch_size": 32,
+  "eval_batch_size": 32,
+  "lr": 0.003,
+  "weight_decay": 0,
+  "gradient_clip": 5,
+  "seeds_predeclared": [
+    42,
+    1024,
+    2025,
+    3407,
+    5000
+  ],
+  "initial_identities": [
+    "C_42",
+    "D_42"
+  ],
+  "additional_identities_conditional_on_seed42": "C/D for 1024,2025,3407,5000",
+  "identities": {
+    "C_42": {
+      "model_arm": "C",
+      "physics": "none",
+      "seed": 42
+    },
+    "D_42": {
+      "model_arm": "D",
+      "physics": "none",
+      "seed": 42
+    },
+    "C_1024": {
+      "model_arm": "C",
+      "physics": "none",
+      "seed": 1024
+    },
+    "D_1024": {
+      "model_arm": "D",
+      "physics": "none",
+      "seed": 1024
+    },
+    "C_2025": {
+      "model_arm": "C",
+      "physics": "none",
+      "seed": 2025
+    },
+    "D_2025": {
+      "model_arm": "D",
+      "physics": "none",
+      "seed": 2025
+    },
+    "C_3407": {
+      "model_arm": "C",
+      "physics": "none",
+      "seed": 3407
+    },
+    "D_3407": {
+      "model_arm": "D",
+      "physics": "none",
+      "seed": 3407
+    },
+    "C_5000": {
+      "model_arm": "C",
+      "physics": "none",
+      "seed": 5000
+    },
+    "D_5000": {
+      "model_arm": "D",
+      "physics": "none",
+      "seed": 5000
+    }
+  },
+  "files_sha256": {
+    "gim_data.py": "1e557f539683394e72f88c9e64a1fcb3654a803736e2c73b432430e0aa3d1bf2",
+    "global_model.py": "a52eaece6b1c628cc96545a58894d00af73f8f8481d4beb29f6369025e76c715",
+    "periodic.py": "413f13dea5a89b16b81f49698ec5ae4e2c0c128bdbb39c9aa89ac0a645d59002",
+    "train_global.py": "c11d654ee45753a0822813ddd703925e29351969b2608dae372cafb333df5b4e",
+    "worker.py": "2a24217fd962f2343749ec343fdc8df0410b1a8fc229abdc101a0d4d7e0113a0",
+    "shared/cg_model.py": "371c6d364a20636e9e1eb75012ac5a56c8d92a9f8785d93b4510ec606554a951",
+    "shared/simvp.py": "3e983a602aa0cf670d3dcdbe20ddce2d65a22f22f8345e7ad61582b40059189f",
+    "shared/attentions.py": "45a6e75e557a621a0554a4778e31bbcec34ed7e6edefe5a2d3f10d0e3eb82db1",
+    "prepared/train_climatology_v1.npz": "d0866c1c49362d06814e6051c69dec5ada015fb7f011a1a22ba105b029d61871",
+    "prepared/geometry.npy": "04113c69e8fd98113888fd911bd01ead9d3fe6e9177bac33692e06bc1f0b97b6",
+    "DATA_AUDIT.json": "1d50b5c260524d4c29a1c7dde36cbe5a3fe039d2306992d8576a4e832177ff18"
+  }
+}

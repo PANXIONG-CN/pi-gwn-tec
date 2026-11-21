@@ -1,0 +1,9 @@
+numpy>=1.24
+scipy>=1.10
+torch>=2.2
+requests
+PyYAML>=6
+pandas>=2
+h5py
+pytest
+# legacy/ (earlier configuration) additionally uses matplotlib and optionally wandb, transformers and peft.

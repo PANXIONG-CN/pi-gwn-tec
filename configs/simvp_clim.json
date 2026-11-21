@@ -1,0 +1,137 @@
+{
+ "paper_name": "SimVP-clim",
+ "slug": "simvp-clim",
+ "family": "clim",
+ "train_entry": "tecfc.training.train_clim",
+ "seeds": [
+  42,
+  1024,
+  2025,
+  3407,
+  5000
+ ],
+ "runtime_config": {
+  "arm": "C-in",
+  "asset_root": "{ASSETS}",
+  "asset_sha256": {
+   "prepared/graph_svd_v1.npz": "193cc847e4d40770a9db5907075f9faf50c29e9adcc30eefe93de25f1a0fd9f1",
+   "prepared/train_climatology_v1.npz": "d0866c1c49362d06814e6051c69dec5ada015fb7f011a1a22ba105b029d61871"
+  },
+  "cg_reference_root": "{TECFC}/models/simvp_reference",
+  "cg_reference_sha256": {
+   "gim_data.py": "1e557f539683394e72f88c9e64a1fcb3654a803736e2c73b432430e0aa3d1bf2",
+   "global_model.py": "a52eaece6b1c628cc96545a58894d00af73f8f8481d4beb29f6369025e76c715",
+   "periodic.py": "413f13dea5a89b16b81f49698ec5ae4e2c0c128bdbb39c9aa89ac0a645d59002",
+   "shared/attentions.py": "45a6e75e557a621a0554a4778e31bbcec34ed7e6edefe5a2d3f10d0e3eb82db1",
+   "shared/cg_model.py": "371c6d364a20636e9e1eb75012ac5a56c8d92a9f8785d93b4510ec606554a951",
+   "shared/simvp.py": "3e983a602aa0cf670d3dcdbe20ddce2d65a22f22f8345e7ad61582b40059189f",
+   "train_global.py": "58931830cfe096197cdd93e6c43633a9f4bd301d7ccb39cd4a1e0832bdf2e7fe"
+  },
+  "data_files": {
+   "2009": {
+    "path": "{GIMTEC}/TEC_2009.npy",
+    "sha256": "c5d4f7e11275a139e0683052f4265de9dc28308f6004388d8dc1f0dc7bcd6276"
+   },
+   "2010": {
+    "path": "{GIMTEC}/TEC_2010.npy",
+    "sha256": "3697ccdb940ba20c562b07828a1c4a72eb409933cbcab3bb081765ec2bea8106"
+   },
+   "2011": {
+    "path": "{GIMTEC}/TEC_2011.npy",
+    "sha256": "03f14389051bdbe194b6d240b7e100f89b3d194ae0e80d97f6c753bf75613a34"
+   },
+   "2012": {
+    "path": "{GIMTEC}/TEC_2012.npy",
+    "sha256": "480a55461120059a351a8d8fe9c46024259a4355ff1644a92db6f975dc649883"
+   },
+   "2013": {
+    "path": "{GIMTEC}/TEC_2013.npy",
+    "sha256": "de90118f20227a207550fdd9df5de71db629b12303632b96954f48b44ba52f85"
+   },
+   "2014": {
+    "path": "{GIMTEC}/TEC_2014.npy",
+    "sha256": "7ccb184e14d32b3ebbc6fad435c0b0871f32837a8fb54c17004447c466b01c5f"
+   },
+   "2016": {
+    "path": "{GIMTEC}/TEC_2016.npy",
+    "sha256": "e435ad612c21a4feb9234c3958730de5042721db22ccb6f282a6de320dfc3e5f"
+   },
+   "2017": {
+    "path": "{GIMTEC}/TEC_2017.npy",
+    "sha256": "830e2c7c137702603c5fae203cee236b90b4c6fb87ada5f6fd84f2475208526b"
+   },
+   "2018": {
+    "path": "{GIMTEC}/TEC_2018.npy",
+    "sha256": "5b9c2adeca4622af4ee457032466c0439be0b21180c5681b7514b3df9d81c0c3"
+   }
+  },
+  "geometry": {
+   "formula": "NOAA fractional-year Fourier solar declination and equation of time",
+   "precision": "float64 calculation, one cast to float32; signed, no daylight clipping",
+   "gamma": "2*pi/N_year*(zero_based_DOY+(UTC_hour-12)/24)",
+   "declination": "0.006918-0.399912*cos(g)+0.070257*sin(g)-0.006758*cos(2g)+0.000907*sin(2g)-0.002697*cos(3g)+0.00148*sin(3g)",
+   "equation_of_time_minutes": "229.18*(0.000075+0.001868*cos(g)-0.032077*sin(g)-0.014615*cos(2g)-0.040849*sin(2g))",
+   "hour_angle": "radians((UTC_minutes+equation_of_time_minutes+4*longitude)/4-180)",
+   "cosSZA": "sin(latitude)*sin(declination)+cos(latitude)*cos(declination)*cos(hour_angle)",
+   "latitude": "87.5,85,...,-87.5 degrees north (step -2.5)",
+   "longitude": "-180,-175,...,175 degrees east (72 unique columns)",
+   "history": "D-1 00,02,...,22 UTC",
+   "alpha": "float32(clip(sum(history[finite],float64)/sum(climate[finite],float64),0.3,3))"
+  },
+  "group_id": "exp0016_GMAE_Cin_fixed200",
+  "loss": "smooth_l1",
+  "reference_epochs": {
+   "G-control": {
+    "path": "{RECORDS}/training_logs/gwn_42_epochs.jsonl",
+    "sha256": "427cb0664d27b2b9d17d7a42678fc0a90aa649da8e59c3059c8abc22bc214d3c"
+   },
+   "C-control": {
+    "path": "{RECORDS}/training_logs/simvp_42_epochs.jsonl",
+    "sha256": "ba61889aa7ea3433e4e2a22cc76a4c90392f24d6e8933a158eb2465402bdf5dd"
+   }
+  },
+  "reference_root": "{TECFC}/models/gwn_reference",
+  "reference_sha256": {
+   "gim_data.py": "1e557f539683394e72f88c9e64a1fcb3654a803736e2c73b432430e0aa3d1bf2",
+   "global_model.py": "09ae2e5f2ed5a18ddb498aa394fb4a1c108a4ba15c1b8ae59af43c06128f2d32",
+   "model/GWN/GWN.py": "3a2ff52ed880498f1faba94be8fadabec9b74d41da4ec450da4c403b29b25b1b",
+   "model/GWN/driver_fusion.py": "85c925220fc2f82765ea658172ff102a7bdb49e30ed541308b73156444b6bc45",
+   "lib/physics/driver_scaler.py": "8db60ece0ceab95484089c49f93590015b67a3e94c160d1389a9b70df32388bc"
+  },
+  "runtime": {
+   "torch": "2.9.1+cu128",
+   "cuda": "12.8",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+  },
+  "schema": "exp0016_fixed200_v1"
+ },
+ "per_seed": {
+  "42": {
+   "expected_initial_tensor_sha256": "c95003c296528d4474c53d0ec822d3b9653a8191086f16b239c3bc42ba34ccc1",
+   "seed": 42
+  },
+  "1024": {
+   "expected_initial_tensor_sha256": "8f497ad0a42693e410bbb57a7b0c6ad9bde7703ed1944d72dd16a0348b2870bd",
+   "seed": 1024
+  },
+  "2025": {
+   "expected_initial_tensor_sha256": "d79b13ee75682a9712844635da43d6f0ba586f8e7396997b85949f190e3f2841",
+   "seed": 2025
+  },
+  "3407": {
+   "expected_initial_tensor_sha256": "b46914c1f055cee655e88ef0a0959800a5005f89883d2fba9ac60f424b17ca24",
+   "seed": 3407
+  },
+  "5000": {
+   "expected_initial_tensor_sha256": "5147708bd4006d2a634ecbde6e068605922090e8dc488648195b21b3415b1960",
+   "seed": 5000
+  }
+ },
+ "release_hash_changes": {
+  "cg_reference_sha256/train_global.py": {
+   "original_sha256": "c11d654ee45753a0822813ddd703925e29351969b2608dae372cafb333df5b4e",
+   "release_sha256": "58931830cfe096197cdd93e6c43633a9f4bd301d7ccb39cd4a1e0832bdf2e7fe",
+   "reason": "operational lines removed in the release; scientific code unchanged"
+  }
+ }
+}

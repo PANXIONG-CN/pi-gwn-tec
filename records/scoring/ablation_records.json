@@ -1,0 +1,284 @@
+{
+ "description": "Training-time diagnostics of the penalty arms (gradient ratios, projection trigger fractions, batch counts) and the edge counts of the fixed graph with and without the longitude seam; recorded during training, not functions of the daily statistics.",
+ "source": "experiments/exp0026/result.json",
+ "training_auxiliary_diagnostics": {
+  "P-0.1": {
+   "auxiliary_ratio_before_mean": 0.1,
+   "auxiliary_ratio_after_mean": 0.09857092395881278,
+   "projection_trigger_fraction": 0.7273125,
+   "batches": 80000
+  },
+  "P-1.0": {
+   "auxiliary_ratio_before_mean": 1.0,
+   "auxiliary_ratio_after_mean": 0.761993228690411,
+   "projection_trigger_fraction": 0.9975625,
+   "batches": 80000
+  },
+  "P-adapt": {
+   "auxiliary_ratio_before_mean": 13849.430061314657,
+   "auxiliary_ratio_after_mean": 13849.430061314657,
+   "projection_trigger_fraction": 0.0,
+   "batches": 80000
+  }
+ },
+ "checks": {
+  "B": {
+   "checks": [
+    {
+     "arm": "P-0.1",
+     "status": "passed",
+     "auxiliary": {
+      "batches": 80,
+      "projection_trigger_fraction": 0.2,
+      "terms": {
+       "nonneg": {
+        "native_mse_mean": 0.0006646727768605278,
+        "native_mse_min": 0.0,
+        "native_mse_max": 0.04585784301161766,
+        "nonzero_batch_fraction": 0.95,
+        "nonzero_residual_fraction": 0.021270532333036003
+       },
+       "rot": {
+        "native_mse_mean": 0.00011751355745790414,
+        "native_mse_min": 0.0,
+        "native_mse_max": 0.00940060243010521,
+        "nonzero_batch_fraction": 0.0375,
+        "nonzero_residual_fraction": 0.0013836290208040663
+       },
+       "roti": {
+        "native_mse_mean": 0.00014005590506888059,
+        "native_mse_min": 0.0,
+        "native_mse_max": 0.011204097419977188,
+        "nonzero_batch_fraction": 0.0625,
+        "nonzero_residual_fraction": 0.002490316510231114
+       },
+       "diffusion": {
+        "native_mse_mean": 0.019265531963901593,
+        "native_mse_min": 0.006355057004839182,
+        "native_mse_max": 0.4907127320766449,
+        "nonzero_batch_fraction": 1.0,
+        "nonzero_residual_fraction": 0.9999999312970649
+       },
+       "chemistry": {
+        "native_mse_mean": 0.1492339065298438,
+        "native_mse_min": 0.09883514046669006,
+        "native_mse_max": 0.6116117238998413,
+        "nonzero_batch_fraction": 1.0,
+        "nonzero_residual_fraction": 0.9999999519079454
+       },
+       "night": {
+        "native_mse_mean": 0.003980776534444885,
+        "native_mse_min": 0.0006184346275404096,
+        "native_mse_max": 0.13242433965206146,
+        "nonzero_batch_fraction": 1.0,
+        "nonzero_residual_fraction": 0.22000202962210863
+       }
+      },
+      "auxiliary_ratio_before": {
+       "min": 0.09999999999999998,
+       "p05": 0.09999999999999999,
+       "median": 0.1,
+       "p95": 0.10000000000000002,
+       "max": 0.10000000000000003,
+       "mean": 0.1
+      },
+      "auxiliary_ratio_after": {
+       "min": 0.0987837255560945,
+       "p05": 0.09991032950034531,
+       "median": 0.1,
+       "p95": 0.10000000000000002,
+       "max": 0.10000000000000003,
+       "mean": 0.09996577932649556
+      },
+      "data_gradient_norm": {
+       "min": 0.0020791234908025817,
+       "p05": 0.003172176911809184,
+       "median": 0.009183662521519354,
+       "p95": 0.03566765933884884,
+       "max": 0.27746708331863773,
+       "mean": 0.016581490703857785
+      },
+      "auxiliary_gradient_norm": {
+       "min": 0.14885658688166262,
+       "p05": 0.169006452574232,
+       "median": 0.20792098258883618,
+       "p95": 1.4321905361312375,
+       "max": 8.864192831175789,
+       "mean": 0.44889366330105085
+      },
+      "cosine": {
+       "min": -0.15549133907012347,
+       "p05": -0.04227944014824946,
+       "median": 0.11006499657051241,
+       "p95": 0.5810969510776288,
+       "max": 0.7852955110709845,
+       "mean": 0.18080738294751458
+      },
+      "fp32_writeback_difference_norm": {
+       "min": 0.00020791234796330092,
+       "p05": 0.0003169541855248746,
+       "median": 0.0009183662516709956,
+       "p95": 0.0035667659875888535,
+       "max": 0.027746708615142376,
+       "mean": 0.0016579690451802112
+      }
+     },
+     "expected_ratio": 0.1,
+     "tolerance": 1e-06
+    },
+    {
+     "arm": "P-1.0",
+     "status": "passed",
+     "auxiliary": {
+      "batches": 80,
+      "projection_trigger_fraction": 0.775,
+      "terms": {
+       "nonneg": {
+        "native_mse_mean": 0.002112387274990096,
+        "native_mse_min": 0.0,
+        "native_mse_max": 0.12014448642730713,
+        "nonzero_batch_fraction": 0.875,
+        "nonzero_residual_fraction": 0.02227918302417711
+       },
+       "rot": {
+        "native_mse_mean": 0.004889747857883009,
+        "native_mse_min": 0.0,
+        "native_mse_max": 0.39040490984916687,
+        "nonzero_batch_fraction": 0.0875,
+        "nonzero_residual_fraction": 0.004338473556401733
+       },
+       "roti": {
+        "native_mse_mean": 0.006207806858472153,
+        "native_mse_min": 0.0,
+        "native_mse_max": 0.49563464522361755,
+        "nonzero_batch_fraction": 0.0875,
+        "nonzero_residual_fraction": 0.008365399913017962
+       },
+       "diffusion": {
+        "native_mse_mean": 0.040026881091762334,
+        "native_mse_min": 0.004624497145414352,
+        "native_mse_max": 1.8242734670639038,
+        "nonzero_batch_fraction": 1.0,
+        "nonzero_residual_fraction": 0.999999958778239
+       },
+       "chemistry": {
+        "native_mse_mean": 0.16068779872730374,
+        "native_mse_min": 0.09016747027635574,
+        "native_mse_max": 1.9000555276870728,
+        "nonzero_batch_fraction": 1.0,
+        "nonzero_residual_fraction": 0.9999999312970649
+       },
+       "night": {
+        "native_mse_mean": 0.009895439944011741,
+        "native_mse_min": 0.00026333227287977934,
+        "native_mse_max": 0.520205020904541,
+        "nonzero_batch_fraction": 1.0,
+        "nonzero_residual_fraction": 0.22187610828569146
+       }
+      },
+      "auxiliary_ratio_before": {
+       "min": 0.9999999999999998,
+       "p05": 0.9999999999999998,
+       "median": 1.0,
+       "p95": 1.0000000000000002,
+       "max": 1.0000000000000002,
+       "mean": 1.0
+      },
+      "auxiliary_ratio_after": {
+       "min": 0.6379017441234579,
+       "p05": 0.7609229757086244,
+       "median": 0.9712007131452441,
+       "p95": 1.0,
+       "max": 1.0000000000000002,
+       "mean": 0.933325892020681
+      },
+      "data_gradient_norm": {
+       "min": 0.003274668310551219,
+       "p05": 0.004871221096558554,
+       "median": 0.009672557339384835,
+       "p95": 0.04433896892378813,
+       "max": 0.33779916844536845,
+       "mean": 0.01869540911539825
+      },
+      "auxiliary_gradient_norm": {
+       "min": 0.0971768237205863,
+       "p05": 0.10576433092836429,
+       "median": 0.13861794589194132,
+       "p95": 2.3756705770741915,
+       "max": 26.27463362446672,
+       "mean": 0.6980311908982573
+      },
+      "cosine": {
+       "min": -0.7701177603745093,
+       "p05": -0.648686158237395,
+       "median": -0.23803972790521422,
+       "p95": 0.8003771241810169,
+       "max": 0.9389902839075087,
+       "mean": -0.14977518704634413
+      },
+      "fp32_writeback_difference_norm": {
+       "min": 0.0031544250271038905,
+       "p05": 0.0037372126957869356,
+       "median": 0.009284934013666432,
+       "p95": 0.044338968460477884,
+       "max": 0.33779916849828917,
+       "mean": 0.018175149319416266
+      }
+     },
+     "expected_ratio": 1.0,
+     "tolerance": 1e-06
+    },
+    {
+     "arm": "D-noSolar",
+     "status": "passed",
+     "prediction_RMS_change_TECU": 6.3496828171373405
+    },
+    {
+     "arm": "D-noGeomag",
+     "status": "passed",
+     "prediction_RMS_change_TECU": 5.819818199196281
+    },
+    {
+     "arm": "D-noIndex",
+     "status": "passed",
+     "prediction_RMS_change_TECU": 4.119423921659547
+    },
+    {
+     "arm": "G-nowrap",
+     "status": "passed",
+     "prediction_RMS_change_TECU": 6.133129496169143,
+     "graphs": [
+      {
+       "index": 0,
+       "original_directed": 45576,
+       "nowrap_directed": 45154,
+       "original_undirected": 20232,
+       "nowrap_undirected": 20021,
+       "removed": 422
+      },
+      {
+       "index": 1,
+       "original_directed": 45576,
+       "nowrap_directed": 45154,
+       "original_undirected": 20232,
+       "nowrap_undirected": 20021,
+       "removed": 422
+      }
+     ]
+    },
+    {
+     "arm": "P-adapt",
+     "status": "passed",
+     "log_variances": {
+      "nonneg": -0.241210475564003,
+      "rot": -0.24107415974140167,
+      "roti": -0.24062541127204895,
+      "diffusion": -0.22488737106323242,
+      "chemistry": -0.22022715210914612,
+      "night": -0.24251869320869446
+     }
+    }
+   ]
+  }
+ }
+}

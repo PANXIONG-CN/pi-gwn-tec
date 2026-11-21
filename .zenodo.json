@@ -1,0 +1,55 @@
+{
+  "title": "pi-gwn-tec: Physical knowledge improves ionospheric electron content forecasts as model input rather than as loss penalty",
+  "description": "<p>Code for the article <em>Physical knowledge improves ionospheric electron content forecasts as model input rather than as loss penalty</em> (Xiong et al.): Graph WaveNet and SimVP forecast models, the physical inputs, loss penalties and structural priors compared in the article, the multi-family ensemble, the regional models for China and Japan, interval calibration, scoring, one configuration file per configuration and a script that recomputes the reported tables from daily statistics. See README.md.</p>",
+  "upload_type": "software",
+  "license": "MIT",
+  "keywords": [
+    "ionosphere",
+    "total electron content",
+    "space weather",
+    "graph neural network",
+    "physics-informed machine learning",
+    "preregistration"
+  ],
+  "creators": [
+    {
+      "name": "Xiong, Pan",
+      "affiliation": "State Key Laboratory of Solar Activity and Space Weather, National Space Science Center, Chinese Academy of Sciences, Beijing, China"
+    },
+    {
+      "name": "Long, Cheng",
+      "affiliation": "College of Computing and Data Science, Nanyang Technological University, Singapore"
+    },
+    {
+      "name": "Zhou, Huiyu",
+      "affiliation": "School of Computing and Mathematical Sciences, University of Leicester, Leicester, United Kingdom"
+    },
+    {
+      "name": "Battiston, Roberto",
+      "affiliation": "Department of Physics, University of Trento, Trento, Italy; National Institute for Nuclear Physics, The Trento Institute for Fundamental Physics and Applications, Trento, Italy"
+    },
+    {
+      "name": "Pulinets, Sergey",
+      "affiliation": "Space Research Institute of the Russian Academy of Sciences (IKI), Moscow, Russia"
+    },
+    {
+      "name": "De Santis, Angelo",
+      "affiliation": "Istituto Nazionale di Geofisica e Vulcanologia, Rome, Italy"
+    },
+    {
+      "name": "Iuppa, Roberto",
+      "affiliation": "Department of Physics, University of Trento, Trento, Italy"
+    },
+    {
+      "name": "Shen, Xuhui",
+      "affiliation": "State Key Laboratory of Solar Activity and Space Weather, National Space Science Center, Chinese Academy of Sciences, Beijing, China"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.24410367",
+      "relation": "references",
+      "scheme": "doi"
+    }
+  ]
+}

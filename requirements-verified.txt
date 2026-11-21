@@ -1,0 +1,11 @@
+# Versions used for the release checks (CPU, Python 3.11.4, macOS arm64); not a claim about the training runtime
+# (training: Python 3.12.3, PyTorch 2.9.1+cu128, CUDA 12.8, NVIDIA RTX PRO 6000 Blackwell Server Edition).
+h5py==3.16.0
+matplotlib==3.11.2
+numpy==2.4.6
+pandas==3.0.6
+pytest==9.1.1
+PyYAML==6.0.3
+requests==2.34.2
+scipy==1.17.1
+torch==2.14.1

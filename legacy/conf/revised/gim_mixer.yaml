@@ -1,0 +1,22 @@
+model: Mixer
+horizon: 12
+driver_fusion: none
+use_drivers_input: false
+rho: 0.0
+lr: 0.003
+weight_decay: 0.0
+batch_size: 192
+eval_batch_size: 1
+epochs: 200
+bf16: false
+early_stop_patience: null
+seed_list: null
+objective: masked_mae_tecu
+checkpoint_selection: first_strict_minimum_supervised_pooled_validation_rmse
+checkpoint_record: https://doi.org/10.5281/zenodo.13349678
+checkpoint_archive: work_dirs.zip
+checkpoint_member: work_dirs/iono/simvp/mix_4channel/checkpoint.pth
+checkpoint_sha256: 3a2fbaa2a17b3f98d238a783ffec26548acee531f03463a353fab8dfe553f530
+checkpoint_original_run: train_20240411_095033
+notes: One published Mix4 SimVP checkpoint, identified above; evaluation only, original training
+  exposure incompletely established.

@@ -1,0 +1,60 @@
+{
+  "status": "frozen",
+  "question": "Global matched GWN G vs existing CG C; complete TEC, no physics or drivers",
+  "matching_protocol_sha256": "7764d320792e36dd42e4b51ea22a975dbc2b874c5ffc86de8447c66961769afb",
+  "epochs": 200,
+  "batch_size": 32,
+  "eval_batch_size": 32,
+  "lr": 0.003,
+  "weight_decay": 0,
+  "gradient_clip": 5,
+  "seeds_predeclared": [
+    42,
+    1024,
+    2025,
+    3407,
+    5000
+  ],
+  "identities": {
+    "G_42": {
+      "model_arm": "G",
+      "physics": "none",
+      "seed": 42
+    },
+    "G_1024": {
+      "model_arm": "G",
+      "physics": "none",
+      "seed": 1024
+    },
+    "G_2025": {
+      "model_arm": "G",
+      "physics": "none",
+      "seed": 2025
+    },
+    "G_3407": {
+      "model_arm": "G",
+      "physics": "none",
+      "seed": 3407
+    },
+    "G_5000": {
+      "model_arm": "G",
+      "physics": "none",
+      "seed": 5000
+    }
+  },
+  "graph_svd_disclosure": "Top 10 singular triplets of the exact adapted graph transition, deterministic sparse ARPACK, residual <1e-6, stored float32. Original source uses a full dense torch.svd and these mathematical triplets in its constructor.",
+  "files_sha256": {
+    "gim_data.py": "1e557f539683394e72f88c9e64a1fcb3654a803736e2c73b432430e0aa3d1bf2",
+    "global_model.py": "09ae2e5f2ed5a18ddb498aa394fb4a1c108a4ba15c1b8ae59af43c06128f2d32",
+    "train_global.py": "dc34798537eb1492465ca5ee6c6c1b2fcaf4b52d1b7425ad48ad0b4d0d09b040",
+    "worker.py": "2a24217fd962f2343749ec343fdc8df0410b1a8fc229abdc101a0d4d7e0113a0",
+    "model/GWN/GWN.py": "3a2ff52ed880498f1faba94be8fadabec9b74d41da4ec450da4c403b29b25b1b",
+    "model/GWN/driver_fusion.py": "85c925220fc2f82765ea658172ff102a7bdb49e30ed541308b73156444b6bc45",
+    "lib/physics/driver_scaler.py": "8db60ece0ceab95484089c49f93590015b67a3e94c160d1389a9b70df32388bc",
+    "prepared/train_climatology_v1.npz": "d0866c1c49362d06814e6051c69dec5ada015fb7f011a1a22ba105b029d61871",
+    "prepared/graph_svd_v1.npz": "193cc847e4d40770a9db5907075f9faf50c29e9adcc30eefe93de25f1a0fd9f1",
+    "prepared/GRAPH_IDENTITY.json": "6ec219f216bb4b6dc4810c5fd431e56bf22fdb3f0b89b74b06f4adaa8a151174",
+    "DATA_AUDIT.json": "1d50b5c260524d4c29a1c7dde36cbe5a3fe039d2306992d8576a4e832177ff18",
+    "MATCHING_PROTOCOL.json": "7764d320792e36dd42e4b51ea22a975dbc2b874c5ffc86de8447c66961769afb"
+  }
+}
